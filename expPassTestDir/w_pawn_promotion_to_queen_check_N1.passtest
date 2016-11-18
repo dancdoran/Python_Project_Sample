@@ -1,0 +1,7 @@
+w_pawn_promotion_to_queen_N1
+Description : White Pawn Promotion to White Queen, no capture
+request : {"method" : "MakeMove","params": {"boardState": [{"type": "K", "loc": "e1"}, {"type": "k", "loc": "e8"}, {"type": "Q", "loc": "b2"}, {"type": "p", "loc": "g2"}, {"type": "q", "loc": "a6"}, {"type": "P", "loc": "g7"}], "move": "g8=Q", "playerState": "w"},"id" : 1,"jsonrpc" : "2.0"}
+"gameState": "check"
+"playerState": "b"
+movedPieces : [{'type': 'P', 'loc': 'g7'}]
+expectedResponsePieces : [{'type': 'Q', 'loc': 'g8'}]

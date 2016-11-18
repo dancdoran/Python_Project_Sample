@@ -1,0 +1,4 @@
+testName : b_rook_invalid_move_in_white_turn
+Description : Moving Black Rook when it's White's turn
+request : {"method" : "MakeMove","params": {"boardState": [{"loc": "c4", "type": "R"}, {"loc": "e1", "type": "K"}, {"loc": "f3", "type": "R"}, {"loc": "c5", "type": "r"}, {"loc": "e8", "type": "k"}, {"loc": "f6", "type": "r"}], "move": "Rfxf3", "playerState": "w"},"id" : 1,"jsonrpc" : "2.0"}
+errorCode : {'code': -32020}

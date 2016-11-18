@@ -1,0 +1,7 @@
+b_rook_start_S5
+Description : Black Rook start Move, S5
+request : {"method" : "MakeMove","params": {"boardState": [{"type": "R", "loc": "a1"}, {"type": "K", "loc": "e1"}, {"type": "R", "loc": "h1"}, {"type": "r", "loc": "a8"}, {"type": "k", "loc": "e8"}, {"type": "r", "loc": "h8"}], "move": "Rhh3", "playerState": "b"},"id" : 1,"jsonrpc" : "2.0"}
+"gameState": ""
+"playerState": "w"
+movedPieces : [{'type': 'r', 'loc': 'h8'}]
+expectedResponsePieces : [{'type': 'r', 'loc': 'h3'}]

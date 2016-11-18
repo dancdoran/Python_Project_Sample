@@ -1,0 +1,1098 @@
+
+ 
+      **** Welcome to the SolidFire Chess Service API Testing System. ****
+
+           Test Results will be written to 'Test_Results_<date>_<time>.report'.
+           All API requests and results will be logged to 'Test_API_<date>_<time>.log.'
+
+
+      **** ALL 42 TESTS COMPLETED! TEST SUMMARY ****
+           34 of 42 Tests PASSED - 81.0 %
+           8 of 42 Tests FAILED - 19.0 %
+           0 of 42 Tests UNEXPECTEDLY EXITED - 0.0 %
+
+Example SolidFire Chess Service API testing scripts & reports.
+Copyright 2016 - Dan Doran, Boulder, CO
+
+Search for the string 'FAILED' (all upper case) to go directly to any failing test.
+
+Date of Test: 11_17_2016
+Time of Test: 09_13_21
+
+Found 42 test files to run:
+/mnt/c/Users/doran/Desktop/SFCS_Test/expPassTestDir/b_castling_kingside.passtest
+/mnt/c/Users/doran/Desktop/SFCS_Test/expPassTestDir/b_castling_queenside.passtest
+/mnt/c/Users/doran/Desktop/SFCS_Test/expPassTestDir/b_kings_bishop_start_SW2.passtest
+/mnt/c/Users/doran/Desktop/SFCS_Test/expPassTestDir/b_king_start_w1.passtest
+/mnt/c/Users/doran/Desktop/SFCS_Test/expPassTestDir/b_knight_jump_pawn_SW.passtest
+/mnt/c/Users/doran/Desktop/SFCS_Test/expPassTestDir/b_knight_jump_right_SE.passtest
+/mnt/c/Users/doran/Desktop/SFCS_Test/expPassTestDir/b_pawn_start_S1.passtest
+/mnt/c/Users/doran/Desktop/SFCS_Test/expPassTestDir/b_pawn_start_S2.passtest
+/mnt/c/Users/doran/Desktop/SFCS_Test/expPassTestDir/b_queens_bishop_start_SE3.passtest
+/mnt/c/Users/doran/Desktop/SFCS_Test/expPassTestDir/b_queen_start_SE2.passtest
+/mnt/c/Users/doran/Desktop/SFCS_Test/expPassTestDir/b_rook_start_E3.passtest
+/mnt/c/Users/doran/Desktop/SFCS_Test/expPassTestDir/b_rook_start_S5.passtest
+/mnt/c/Users/doran/Desktop/SFCS_Test/expPassTestDir/w_castling_kingside.passtest
+/mnt/c/Users/doran/Desktop/SFCS_Test/expPassTestDir/w_castling_queenside.passtest
+/mnt/c/Users/doran/Desktop/SFCS_Test/expPassTestDir/w_kings_bishop_start_NE3.passtest
+/mnt/c/Users/doran/Desktop/SFCS_Test/expPassTestDir/w_kings_bishop_start_NW2.passtest
+/mnt/c/Users/doran/Desktop/SFCS_Test/expPassTestDir/w_king_b_king_stalemate.passtest
+/mnt/c/Users/doran/Desktop/SFCS_Test/expPassTestDir/w_king_start_W1.passtest
+/mnt/c/Users/doran/Desktop/SFCS_Test/expPassTestDir/w_knight_start_jump_pawn_NW.passtest
+/mnt/c/Users/doran/Desktop/SFCS_Test/expPassTestDir/w_knight_start_jump_SE.passtest
+/mnt/c/Users/doran/Desktop/SFCS_Test/expPassTestDir/w_pawn_captures_bishop_NW1.passtest
+/mnt/c/Users/doran/Desktop/SFCS_Test/expPassTestDir/w_pawn_enpassant_capture_NW1.passtest
+/mnt/c/Users/doran/Desktop/SFCS_Test/expPassTestDir/w_pawn_promotion_to_queen_check_N1.passtest
+/mnt/c/Users/doran/Desktop/SFCS_Test/expPassTestDir/w_pawn_start_N1.passtest
+/mnt/c/Users/doran/Desktop/SFCS_Test/expPassTestDir/w_pawn_start_N2.passtest
+/mnt/c/Users/doran/Desktop/SFCS_Test/expPassTestDir/w_queens_bishop_start_NE2.passtest
+/mnt/c/Users/doran/Desktop/SFCS_Test/expPassTestDir/w_queens_bishop_start_NW.passtest
+/mnt/c/Users/doran/Desktop/SFCS_Test/expPassTestDir/w_queen_start_NE3.passtest
+/mnt/c/Users/doran/Desktop/SFCS_Test/expPassTestDir/w_rook_checkmate_N5.passtest
+/mnt/c/Users/doran/Desktop/SFCS_Test/expPassTestDir/w_rook_check_N5.passtest
+/mnt/c/Users/doran/Desktop/SFCS_Test/expPassTestDir/w_rook_start_move.passtest
+/mnt/c/Users/doran/Desktop/SFCS_Test/expFailTestDir/b_pawn_starts_first_move_error.expfail
+/mnt/c/Users/doran/Desktop/SFCS_Test/expFailTestDir/b_queen_illegal_move_thru_pieces_S5.expfail
+/mnt/c/Users/doran/Desktop/SFCS_Test/expFailTestDir/b_rook_invalid_move_in_white_turn.expfail
+/mnt/c/Users/doran/Desktop/SFCS_Test/expFailTestDir/nine_b_pawns_board_error.expfail
+/mnt/c/Users/doran/Desktop/SFCS_Test/expFailTestDir/ninth_b_pawn_in_w_start_row_board_error.expfail
+/mnt/c/Users/doran/Desktop/SFCS_Test/expFailTestDir/one_piece_on_board_error.expfail
+/mnt/c/Users/doran/Desktop/SFCS_Test/expFailTestDir/start_board_missing_king_board_error.expfail
+/mnt/c/Users/doran/Desktop/SFCS_Test/expFailTestDir/two_b_kings_33_total_pieces_board_error.expfail
+/mnt/c/Users/doran/Desktop/SFCS_Test/expFailTestDir/two_pieces_on_square_board_error.expfail
+/mnt/c/Users/doran/Desktop/SFCS_Test/expFailTestDir/w_move_while_b_turn_player_error.expfail
+/mnt/c/Users/doran/Desktop/SFCS_Test/expFailTestDir/w_queen_illegal_knight_move_error.expfail
+
+
+                **** Beginning SFCS API Tests ****
+
+======================================================================
+****** Starting test case b_castling_kingside ******
+
+Test: b_castling_kingside specified in test definition file b_castling_kingside.passtest
+
+Test Description:  Black Castling Kingside move test
+
+***Beginning test run of b_castling_kingside***
+
+We have an API Request for b_castling_kingside. Submit it to the SFCS API and save to log file.
+
+API Request for testcase b_castling_kingside:
+ {"method" : "MakeMove","params": {"boardState": [{"type": "R", "loc": "a1"}, {"type": "K", "loc": "e1"}, {"type": "R", "loc": "h1"}, {"type": "P", "loc": "a2"}, {"type": "P", "loc": "b2"}, {"type": "P", "loc": "c2"}, {"type": "P", "loc": "f2"}, {"type": "P", "loc": "g2"}, {"type": "P", "loc": "h2"}, {"type": "p", "loc": "a7"}, {"type": "p", "loc": "b7"}, {"type": "p", "loc": "c7"}, {"type": "p", "loc": "f7"}, {"type": "p", "loc": "g7"}, {"type": "p", "loc": "h7"}, {"type": "r", "loc": "a8"}, {"type": "k", "loc": "e8"}, {"type": "r", "loc": "h8"}], "move": "0-0", "playerState": "b"},"id" : 1,"jsonrpc" : "2.0"}
+
+Received an 'error' message in the SFCS API response:
+
+{'error': {'data': '0-0', 'message': 'Invalid move string.', 'code': -32020}, 'id': 1}
+Checking our SFCS API response against the expected response params...
+Found unexpected results in the API response!
+
+FUNCTIONAL TEST b_castling_kingside FAILED.
+Returned Failure Information:
+functionalTestFAIL: Received unexpected API response error {'error': {'data': '0-0', 'message': 'Invalid move string.', 'code': -32020}, 'id': 1}
+=============================================================================
+
+
+Moving on to next test...
+
+======================================================================
+****** Starting test case b_castling_queenside ******
+
+Test: b_castling_queenside specified in test definition file b_castling_queenside.passtest
+
+Test Description:  Black Castling Queenside move test
+
+***Beginning test run of b_castling_queenside***
+
+We have an API Request for b_castling_queenside. Submit it to the SFCS API and save to log file.
+
+API Request for testcase b_castling_queenside:
+ {"method" : "MakeMove","params": {"boardState": [{"type": "R", "loc": "a1"}, {"type": "K", "loc": "e1"}, {"type": "R", "loc": "h1"}, {"type": "P", "loc": "a2"}, {"type": "P", "loc": "b2"}, {"type": "P", "loc": "c2"}, {"type": "P", "loc": "f2"}, {"type": "P", "loc": "g2"}, {"type": "P", "loc": "h2"}, {"type": "p", "loc": "a7"}, {"type": "p", "loc": "b7"}, {"type": "p", "loc": "c7"}, {"type": "p", "loc": "f7"}, {"type": "p", "loc": "g7"}, {"type": "p", "loc": "h7"}, {"type": "r", "loc": "a8"}, {"type": "k", "loc": "e8"}, {"type": "r", "loc": "h8"}], "move": "0-0-0", "playerState": "b"},"id" : 1,"jsonrpc" : "2.0"}
+
+Received an 'error' message in the SFCS API response:
+
+{'error': {'data': '0-0-0', 'message': 'Invalid move string.', 'code': -32020}, 'id': 1}
+Checking our SFCS API response against the expected response params...
+Found unexpected results in the API response!
+
+FUNCTIONAL TEST b_castling_queenside FAILED.
+Returned Failure Information:
+functionalTestFAIL: Received unexpected API response error {'error': {'data': '0-0-0', 'message': 'Invalid move string.', 'code': -32020}, 'id': 1}
+=============================================================================
+
+
+Moving on to next test...
+
+======================================================================
+****** Starting test case b_kings_bishop_start_SW2 ******
+
+Test: b_kings_bishop_start_SW2 specified in test definition file b_kings_bishop_start_SW2.passtest
+
+Test Description:  Black King's Bishop Starting Move SW
+
+***Beginning test run of b_kings_bishop_start_SW2***
+
+We have an API Request for b_kings_bishop_start_SW2. Submit it to the SFCS API and save to log file.
+
+API Request for testcase b_kings_bishop_start_SW2:
+ {"method" : "MakeMove","params": {"boardState": [{"type": "R", "loc": "a1"}, {"type": "N", "loc": "b1"}, {"type": "B", "loc": "c1"}, {"type": "Q", "loc": "d1"}, {"type": "K", "loc": "e1"}, {"type": "B", "loc": "f1"}, {"type": "N", "loc": "g1"}, {"type": "R", "loc": "h1"}, {"type": "P", "loc": "a2"}, {"type": "P", "loc": "b4"}, {"type": "P", "loc": "c2"}, {"type": "P", "loc": "d4"}, {"type": "P", "loc": "e4"}, {"type": "P", "loc": "f2"}, {"type": "P", "loc": "g4"}, {"type": "P", "loc": "h2"}, {"type": "p", "loc": "a7"}, {"type": "p", "loc": "b5"}, {"type": "p", "loc": "c7"}, {"type": "p", "loc": "d5"}, {"type": "p", "loc": "e5"}, {"type": "p", "loc": "f7"}, {"type": "p", "loc": "g5"}, {"type": "p", "loc": "h7"}, {"type": "r", "loc": "a8"}, {"type": "n", "loc": "b8"}, {"type": "b", "loc": "c8"}, {"type": "q", "loc": "d8"}, {"type": "k", "loc": "e8"}, {"type": "b", "loc": "f8"}, {"type": "n", "loc": "g8"}, {"type": "r", "loc": "h8"}], "move": "Bfh6", "playerState": "b"},"id" : 1,"jsonrpc" : "2.0"}
+
+SFCS API Response:
+{'result': {'gameState': '', 'boardState': [{'type': 'R', 'loc': 'a1'}, {'type': 'N', 'loc': 'b1'}, {'type': 'B', 'loc': 'c1'}, {'type': 'Q', 'loc': 'd1'}, {'type': 'K', 'loc': 'e1'}, {'type': 'B', 'loc': 'f1'}, {'type': 'N', 'loc': 'g1'}, {'type': 'R', 'loc': 'h1'}, {'type': 'P', 'loc': 'a2'}, {'type': 'P', 'loc': 'c2'}, {'type': 'P', 'loc': 'f2'}, {'type': 'P', 'loc': 'h2'}, {'type': 'P', 'loc': 'b4'}, {'type': 'P', 'loc': 'd4'}, {'type': 'P', 'loc': 'e4'}, {'type': 'P', 'loc': 'g4'}, {'type': 'p', 'loc': 'b5'}, {'type': 'p', 'loc': 'd5'}, {'type': 'p', 'loc': 'e5'}, {'type': 'p', 'loc': 'g5'}, {'type': 'b', 'loc': 'h6'}, {'type': 'p', 'loc': 'a7'}, {'type': 'p', 'loc': 'c7'}, {'type': 'p', 'loc': 'f7'}, {'type': 'p', 'loc': 'h7'}, {'type': 'r', 'loc': 'a8'}, {'type': 'n', 'loc': 'b8'}, {'type': 'b', 'loc': 'c8'}, {'type': 'q', 'loc': 'd8'}, {'type': 'k', 'loc': 'e8'}, {'type': 'n', 'loc': 'g8'}, {'type': 'r', 'loc': 'h8'}], 'playerState': 'w'}, 'id': 1}
+Checking our SFCS API response against the expected response params...
+All API response params as expected.
+
+FUNCTIONAL TEST b_kings_bishop_start_SW2 PASSED.
+=============================================================================
+
+
+======================================================================
+****** Starting test case b_king_start_w1 ******
+
+Test: b_king_start_w1 specified in test definition file b_king_start_w1.passtest
+
+Test Description:  Black King Start Move West
+
+***Beginning test run of b_king_start_w1***
+
+We have an API Request for b_king_start_w1. Submit it to the SFCS API and save to log file.
+
+API Request for testcase b_king_start_w1:
+ {"method" : "MakeMove","params": {"boardState": [{"type": "Q", "loc": "c1"}, {"type": "K", "loc": "e1"}, {"type": "q", "loc": "c8"}, {"type": "k", "loc": "e8"}], "move": "Kef8", "playerState": "b"},"id" : 1,"jsonrpc" : "2.0"}
+
+SFCS API Response:
+{'result': {'gameState': '', 'boardState': [{'type': 'Q', 'loc': 'c1'}, {'type': 'K', 'loc': 'e1'}, {'type': 'q', 'loc': 'c8'}, {'type': 'k', 'loc': 'f8'}], 'playerState': 'w'}, 'id': 1}
+Checking our SFCS API response against the expected response params...
+All API response params as expected.
+
+FUNCTIONAL TEST b_king_start_w1 PASSED.
+=============================================================================
+
+
+======================================================================
+****** Starting test case b_knight_jump_pawn_SW ******
+
+Test: b_knight_jump_pawn_SW specified in test definition file b_knight_jump_pawn_SW.passtest
+
+Test Description:  Black Knight Start Move left, jumping pawn
+
+***Beginning test run of b_knight_jump_pawn_SW***
+
+We have an API Request for b_knight_jump_pawn_SW. Submit it to the SFCS API and save to log file.
+
+API Request for testcase b_knight_jump_pawn_SW:
+ {"method" : "MakeMove","params": {"boardState": [{"type": "R", "loc": "a1"}, {"type": "N", "loc": "b1"}, {"type": "B", "loc": "c1"}, {"type": "Q", "loc": "d1"}, {"type": "K", "loc": "e1"}, {"type": "B", "loc": "f1"}, {"type": "N", "loc": "g1"}, {"type": "R", "loc": "h1"}, {"type": "P", "loc": "a2"}, {"type": "P", "loc": "b2"}, {"type": "P", "loc": "c2"}, {"type": "P", "loc": "d3"}, {"type": "P", "loc": "e2"}, {"type": "P", "loc": "f2"}, {"type": "P", "loc": "g2"}, {"type": "P", "loc": "h2"}, {"type": "p", "loc": "a7"}, {"type": "p", "loc": "b7"}, {"type": "p", "loc": "c7"}, {"type": "p", "loc": "d7"}, {"type": "p", "loc": "e7"}, {"type": "p", "loc": "f7"}, {"type": "p", "loc": "g7"}, {"type": "p", "loc": "h7"}, {"type": "r", "loc": "a8"}, {"type": "n", "loc": "b8"}, {"type": "b", "loc": "c8"}, {"type": "q", "loc": "d8"}, {"type": "k", "loc": "e8"}, {"type": "b", "loc": "f8"}, {"type": "n", "loc": "g8"}, {"type": "r", "loc": "h8"}], "move": "Ngh6", "playerState": "b"},"id" : 1,"jsonrpc" : "2.0"}
+
+SFCS API Response:
+{'result': {'gameState': '', 'boardState': [{'type': 'R', 'loc': 'a1'}, {'type': 'N', 'loc': 'b1'}, {'type': 'B', 'loc': 'c1'}, {'type': 'Q', 'loc': 'd1'}, {'type': 'K', 'loc': 'e1'}, {'type': 'B', 'loc': 'f1'}, {'type': 'N', 'loc': 'g1'}, {'type': 'R', 'loc': 'h1'}, {'type': 'P', 'loc': 'a2'}, {'type': 'P', 'loc': 'b2'}, {'type': 'P', 'loc': 'c2'}, {'type': 'P', 'loc': 'e2'}, {'type': 'P', 'loc': 'f2'}, {'type': 'P', 'loc': 'g2'}, {'type': 'P', 'loc': 'h2'}, {'type': 'P', 'loc': 'd3'}, {'type': 'n', 'loc': 'h6'}, {'type': 'p', 'loc': 'a7'}, {'type': 'p', 'loc': 'b7'}, {'type': 'p', 'loc': 'c7'}, {'type': 'p', 'loc': 'd7'}, {'type': 'p', 'loc': 'e7'}, {'type': 'p', 'loc': 'f7'}, {'type': 'p', 'loc': 'g7'}, {'type': 'p', 'loc': 'h7'}, {'type': 'r', 'loc': 'a8'}, {'type': 'n', 'loc': 'b8'}, {'type': 'b', 'loc': 'c8'}, {'type': 'q', 'loc': 'd8'}, {'type': 'k', 'loc': 'e8'}, {'type': 'b', 'loc': 'f8'}, {'type': 'r', 'loc': 'h8'}], 'playerState': 'w'}, 'id': 1}
+Checking our SFCS API response against the expected response params...
+All API response params as expected.
+
+FUNCTIONAL TEST b_knight_jump_pawn_SW PASSED.
+=============================================================================
+
+
+======================================================================
+****** Starting test case b_knight_jump_right_SE ******
+
+Test: b_knight_jump_right_SE specified in test definition file b_knight_jump_right_SE.passtest
+
+Test Description:  Black Knight starting move, jumping pawn right
+
+***Beginning test run of b_knight_jump_right_SE***
+
+We have an API Request for b_knight_jump_right_SE. Submit it to the SFCS API and save to log file.
+
+API Request for testcase b_knight_jump_right_SE:
+ {"method" : "MakeMove","params": {"boardState": [{"loc": "a1", "type": "R"}, {"loc": "b1", "type": "N"}, {"loc": "c1", "type": "B"}, {"loc": "d1", "type": "Q"}, {"loc": "e1", "type": "K"}, {"loc": "f1", "type": "B"}, {"loc": "g1", "type": "N"}, {"loc": "h1", "type": "R"}, {"loc": "a2", "type": "P"}, {"loc": "b2", "type": "P"}, {"loc": "c2", "type": "P"}, {"loc": "d3", "type": "P"}, {"loc": "e2", "type": "P"}, {"loc": "f2", "type": "P"}, {"loc": "g2", "type": "P"}, {"loc": "h2", "type": "P"}, {"loc": "a7", "type": "p"}, {"loc": "b7", "type": "p"}, {"loc": "c7", "type": "p"}, {"loc": "d7", "type": "p"}, {"loc": "e7", "type": "p"}, {"loc": "f7", "type": "p"}, {"loc": "g7", "type": "p"}, {"loc": "h7", "type": "p"}, {"loc": "a8", "type": "r"}, {"loc": "b8", "type": "n"}, {"loc": "c8", "type": "b"}, {"loc": "d8", "type": "q"}, {"loc": "e8", "type": "k"}, {"loc": "f8", "type": "b"}, {"loc": "g8", "type": "n"}, {"loc": "h8", "type": "r"}], "move": "Nba6", "playerState": "b"},"id" : 1,"jsonrpc" : "2.0"}
+
+SFCS API Response:
+{'result': {'gameState': '', 'boardState': [{'type': 'R', 'loc': 'a1'}, {'type': 'N', 'loc': 'b1'}, {'type': 'B', 'loc': 'c1'}, {'type': 'Q', 'loc': 'd1'}, {'type': 'K', 'loc': 'e1'}, {'type': 'B', 'loc': 'f1'}, {'type': 'N', 'loc': 'g1'}, {'type': 'R', 'loc': 'h1'}, {'type': 'P', 'loc': 'a2'}, {'type': 'P', 'loc': 'b2'}, {'type': 'P', 'loc': 'c2'}, {'type': 'P', 'loc': 'e2'}, {'type': 'P', 'loc': 'f2'}, {'type': 'P', 'loc': 'g2'}, {'type': 'P', 'loc': 'h2'}, {'type': 'P', 'loc': 'd3'}, {'type': 'n', 'loc': 'a6'}, {'type': 'p', 'loc': 'a7'}, {'type': 'p', 'loc': 'b7'}, {'type': 'p', 'loc': 'c7'}, {'type': 'p', 'loc': 'd7'}, {'type': 'p', 'loc': 'e7'}, {'type': 'p', 'loc': 'f7'}, {'type': 'p', 'loc': 'g7'}, {'type': 'p', 'loc': 'h7'}, {'type': 'r', 'loc': 'a8'}, {'type': 'b', 'loc': 'c8'}, {'type': 'q', 'loc': 'd8'}, {'type': 'k', 'loc': 'e8'}, {'type': 'b', 'loc': 'f8'}, {'type': 'n', 'loc': 'g8'}, {'type': 'r', 'loc': 'h8'}], 'playerState': 'w'}, 'id': 1}
+Checking our SFCS API response against the expected response params...
+All API response params as expected.
+
+FUNCTIONAL TEST b_knight_jump_right_SE PASSED.
+=============================================================================
+
+
+======================================================================
+****** Starting test case b_pawn_start_S1 ******
+
+Test: b_pawn_start_S1 specified in test definition file b_pawn_start_S1.passtest
+
+Test Description:  Black Pawn makes black starting move
+
+***Beginning test run of b_pawn_start_S1***
+
+We have an API Request for b_pawn_start_S1. Submit it to the SFCS API and save to log file.
+
+API Request for testcase b_pawn_start_S1:
+ {"method" : "MakeMove","params": {"boardState": [{"loc": "a1", "type": "R"}, {"loc": "b1", "type": "N"}, {"loc": "c1", "type": "B"}, {"loc": "d1", "type": "Q"}, {"loc": "e1", "type": "K"}, {"loc": "f1", "type": "B"}, {"loc": "g1", "type": "N"}, {"loc": "h1", "type": "R"}, {"loc": "a2", "type": "P"}, {"loc": "b2", "type": "P"}, {"loc": "c2", "type": "P"}, {"loc": "d3", "type": "P"}, {"loc": "e2", "type": "P"}, {"loc": "f2", "type": "P"}, {"loc": "g2", "type": "P"}, {"loc": "h2", "type": "P"}, {"loc": "a7", "type": "p"}, {"loc": "b7", "type": "p"}, {"loc": "c7", "type": "p"}, {"loc": "d7", "type": "p"}, {"loc": "e7", "type": "p"}, {"loc": "f7", "type": "p"}, {"loc": "g7", "type": "p"}, {"loc": "h7", "type": "p"}, {"loc": "a8", "type": "r"}, {"loc": "b8", "type": "n"}, {"loc": "c8", "type": "b"}, {"loc": "d8", "type": "q"}, {"loc": "e8", "type": "k"}, {"loc": "f8", "type": "b"}, {"loc": "g8", "type": "n"}, {"loc": "h8", "type": "r"}], "move": "d6", "playerState": "b"},"id" : 1,"jsonrpc" : "2.0"}
+
+SFCS API Response:
+{'result': {'gameState': '', 'boardState': [{'type': 'R', 'loc': 'a1'}, {'type': 'N', 'loc': 'b1'}, {'type': 'B', 'loc': 'c1'}, {'type': 'Q', 'loc': 'd1'}, {'type': 'K', 'loc': 'e1'}, {'type': 'B', 'loc': 'f1'}, {'type': 'N', 'loc': 'g1'}, {'type': 'R', 'loc': 'h1'}, {'type': 'P', 'loc': 'a2'}, {'type': 'P', 'loc': 'b2'}, {'type': 'P', 'loc': 'c2'}, {'type': 'P', 'loc': 'e2'}, {'type': 'P', 'loc': 'f2'}, {'type': 'P', 'loc': 'g2'}, {'type': 'P', 'loc': 'h2'}, {'type': 'P', 'loc': 'd3'}, {'type': 'p', 'loc': 'd6'}, {'type': 'p', 'loc': 'a7'}, {'type': 'p', 'loc': 'b7'}, {'type': 'p', 'loc': 'c7'}, {'type': 'p', 'loc': 'e7'}, {'type': 'p', 'loc': 'f7'}, {'type': 'p', 'loc': 'g7'}, {'type': 'p', 'loc': 'h7'}, {'type': 'r', 'loc': 'a8'}, {'type': 'n', 'loc': 'b8'}, {'type': 'b', 'loc': 'c8'}, {'type': 'q', 'loc': 'd8'}, {'type': 'k', 'loc': 'e8'}, {'type': 'b', 'loc': 'f8'}, {'type': 'n', 'loc': 'g8'}, {'type': 'r', 'loc': 'h8'}], 'playerState': 'w'}, 'id': 1}
+Checking our SFCS API response against the expected response params...
+All API response params as expected.
+
+FUNCTIONAL TEST b_pawn_start_S1 PASSED.
+=============================================================================
+
+
+======================================================================
+****** Starting test case b_pawn_start_S2 ******
+
+Test: b_pawn_start_S2 specified in test definition file b_pawn_start_S2.passtest
+
+Test Description:  Black Pawn opening move, 2 squares
+
+***Beginning test run of b_pawn_start_S2***
+
+We have an API Request for b_pawn_start_S2. Submit it to the SFCS API and save to log file.
+
+API Request for testcase b_pawn_start_S2:
+ {"method" : "MakeMove","params": {"boardState": [{"loc": "a1", "type": "R"}, {"loc": "b1", "type": "N"}, {"loc": "c1", "type": "B"}, {"loc": "d1", "type": "Q"}, {"loc": "e1", "type": "K"}, {"loc": "f1", "type": "B"}, {"loc": "g1", "type": "N"}, {"loc": "h1", "type": "R"}, {"loc": "a2", "type": "P"}, {"loc": "b2", "type": "P"}, {"loc": "c2", "type": "P"}, {"loc": "d3", "type": "P"}, {"loc": "e2", "type": "P"}, {"loc": "f2", "type": "P"}, {"loc": "g2", "type": "P"}, {"loc": "h2", "type": "P"}, {"loc": "a7", "type": "p"}, {"loc": "b7", "type": "p"}, {"loc": "c7", "type": "p"}, {"loc": "d7", "type": "p"}, {"loc": "e7", "type": "p"}, {"loc": "f7", "type": "p"}, {"loc": "g7", "type": "p"}, {"loc": "h7", "type": "p"}, {"loc": "a8", "type": "r"}, {"loc": "b8", "type": "n"}, {"loc": "c8", "type": "b"}, {"loc": "d8", "type": "q"}, {"loc": "e8", "type": "k"}, {"loc": "f8", "type": "b"}, {"loc": "g8", "type": "n"}, {"loc": "h8", "type": "r"}], "move": "e5", "playerState": "b"},"id" : 1,"jsonrpc" : "2.0"}
+
+SFCS API Response:
+{'result': {'gameState': '', 'boardState': [{'type': 'R', 'loc': 'a1'}, {'type': 'N', 'loc': 'b1'}, {'type': 'B', 'loc': 'c1'}, {'type': 'Q', 'loc': 'd1'}, {'type': 'K', 'loc': 'e1'}, {'type': 'B', 'loc': 'f1'}, {'type': 'N', 'loc': 'g1'}, {'type': 'R', 'loc': 'h1'}, {'type': 'P', 'loc': 'a2'}, {'type': 'P', 'loc': 'b2'}, {'type': 'P', 'loc': 'c2'}, {'type': 'P', 'loc': 'e2'}, {'type': 'P', 'loc': 'f2'}, {'type': 'P', 'loc': 'g2'}, {'type': 'P', 'loc': 'h2'}, {'type': 'P', 'loc': 'd3'}, {'type': 'p', 'loc': 'e5'}, {'type': 'p', 'loc': 'a7'}, {'type': 'p', 'loc': 'b7'}, {'type': 'p', 'loc': 'c7'}, {'type': 'p', 'loc': 'd7'}, {'type': 'p', 'loc': 'f7'}, {'type': 'p', 'loc': 'g7'}, {'type': 'p', 'loc': 'h7'}, {'type': 'r', 'loc': 'a8'}, {'type': 'n', 'loc': 'b8'}, {'type': 'b', 'loc': 'c8'}, {'type': 'q', 'loc': 'd8'}, {'type': 'k', 'loc': 'e8'}, {'type': 'b', 'loc': 'f8'}, {'type': 'n', 'loc': 'g8'}, {'type': 'r', 'loc': 'h8'}], 'playerState': 'w'}, 'id': 1}
+Checking our SFCS API response against the expected response params...
+All API response params as expected.
+
+FUNCTIONAL TEST b_pawn_start_S2 PASSED.
+=============================================================================
+
+
+======================================================================
+****** Starting test case b_queens_bishop_start_SE3 ******
+
+Test: b_queens_bishop_start_SE3 specified in test definition file b_queens_bishop_start_SE3.passtest
+
+Test Description:  Black Queen's Bishop Starting Move SE
+
+***Beginning test run of b_queens_bishop_start_SE3***
+
+We have an API Request for b_queens_bishop_start_SE3. Submit it to the SFCS API and save to log file.
+
+API Request for testcase b_queens_bishop_start_SE3:
+ {"method" : "MakeMove","params": {"boardState": [{"type": "R", "loc": "a1"}, {"type": "N", "loc": "b1"}, {"type": "B", "loc": "c1"}, {"type": "Q", "loc": "d1"}, {"type": "K", "loc": "e1"}, {"type": "B", "loc": "f1"}, {"type": "N", "loc": "g1"}, {"type": "R", "loc": "h1"}, {"type": "P", "loc": "a2"}, {"type": "P", "loc": "b4"}, {"type": "P", "loc": "c2"}, {"type": "P", "loc": "d4"}, {"type": "P", "loc": "e4"}, {"type": "P", "loc": "f2"}, {"type": "P", "loc": "g4"}, {"type": "P", "loc": "h2"}, {"type": "p", "loc": "a7"}, {"type": "p", "loc": "b5"}, {"type": "p", "loc": "c7"}, {"type": "p", "loc": "d5"}, {"type": "p", "loc": "e5"}, {"type": "p", "loc": "f7"}, {"type": "p", "loc": "g5"}, {"type": "p", "loc": "h7"}, {"type": "r", "loc": "a8"}, {"type": "n", "loc": "b8"}, {"type": "b", "loc": "c8"}, {"type": "q", "loc": "d8"}, {"type": "k", "loc": "e8"}, {"type": "b", "loc": "f8"}, {"type": "n", "loc": "g8"}, {"type": "r", "loc": "h8"}], "move": "Bca6", "playerState": "b"},"id" : 1,"jsonrpc" : "2.0"}
+
+SFCS API Response:
+{'result': {'gameState': '', 'boardState': [{'type': 'R', 'loc': 'a1'}, {'type': 'N', 'loc': 'b1'}, {'type': 'B', 'loc': 'c1'}, {'type': 'Q', 'loc': 'd1'}, {'type': 'K', 'loc': 'e1'}, {'type': 'B', 'loc': 'f1'}, {'type': 'N', 'loc': 'g1'}, {'type': 'R', 'loc': 'h1'}, {'type': 'P', 'loc': 'a2'}, {'type': 'P', 'loc': 'c2'}, {'type': 'P', 'loc': 'f2'}, {'type': 'P', 'loc': 'h2'}, {'type': 'P', 'loc': 'b4'}, {'type': 'P', 'loc': 'd4'}, {'type': 'P', 'loc': 'e4'}, {'type': 'P', 'loc': 'g4'}, {'type': 'p', 'loc': 'b5'}, {'type': 'p', 'loc': 'd5'}, {'type': 'p', 'loc': 'e5'}, {'type': 'p', 'loc': 'g5'}, {'type': 'b', 'loc': 'a6'}, {'type': 'p', 'loc': 'a7'}, {'type': 'p', 'loc': 'c7'}, {'type': 'p', 'loc': 'f7'}, {'type': 'p', 'loc': 'h7'}, {'type': 'r', 'loc': 'a8'}, {'type': 'n', 'loc': 'b8'}, {'type': 'q', 'loc': 'd8'}, {'type': 'k', 'loc': 'e8'}, {'type': 'b', 'loc': 'f8'}, {'type': 'n', 'loc': 'g8'}, {'type': 'r', 'loc': 'h8'}], 'playerState': 'w'}, 'id': 1}
+Checking our SFCS API response against the expected response params...
+All API response params as expected.
+
+FUNCTIONAL TEST b_queens_bishop_start_SE3 PASSED.
+=============================================================================
+
+
+======================================================================
+****** Starting test case b_queen_start_SE2 ******
+
+Test: b_queen_start_SE2 specified in test definition file b_queen_start_SE2.passtest
+
+Test Description:  Black Queen start move, SE
+
+***Beginning test run of b_queen_start_SE2***
+
+We have an API Request for b_queen_start_SE2. Submit it to the SFCS API and save to log file.
+
+API Request for testcase b_queen_start_SE2:
+ {"method" : "MakeMove","params": {"boardState": [{"type": "Q", "loc": "d1"}, {"type": "K", "loc": "g2"}, {"type": "q", "loc": "d8"}, {"type": "k", "loc": "b7"}], "move": "Qdb6", "playerState": "b"},"id" : 1,"jsonrpc" : "2.0"}
+
+SFCS API Response:
+{'result': {'gameState': '', 'boardState': [{'type': 'Q', 'loc': 'd1'}, {'type': 'K', 'loc': 'g2'}, {'type': 'q', 'loc': 'b6'}, {'type': 'k', 'loc': 'b7'}], 'playerState': 'w'}, 'id': 1}
+Checking our SFCS API response against the expected response params...
+All API response params as expected.
+
+FUNCTIONAL TEST b_queen_start_SE2 PASSED.
+=============================================================================
+
+
+======================================================================
+****** Starting test case b_rook_start_E3 ******
+
+Test: b_rook_start_E3 specified in test definition file b_rook_start_E3.passtest
+
+Test Description:  Black Rook Start Horizontal move
+
+***Beginning test run of b_rook_start_E3***
+
+We have an API Request for b_rook_start_E3. Submit it to the SFCS API and save to log file.
+
+API Request for testcase b_rook_start_E3:
+ {"method" : "MakeMove","params": {"boardState": [{"loc": "a1", "type": "R"}, {"loc": "e1", "type": "K"}, {"loc": "h1", "type": "R"}, {"loc": "a8", "type": "r"}, {"loc": "e8", "type": "k"}, {"loc": "h8", "type": "r"}], "move": "Rad8", "playerState": "b"},"id" : 1,"jsonrpc" : "2.0"}
+
+SFCS API Response:
+{'result': {'gameState': '', 'boardState': [{'type': 'R', 'loc': 'a1'}, {'type': 'K', 'loc': 'e1'}, {'type': 'R', 'loc': 'h1'}, {'type': 'r', 'loc': 'd8'}, {'type': 'k', 'loc': 'e8'}, {'type': 'r', 'loc': 'h8'}], 'playerState': 'w'}, 'id': 1}
+Checking our SFCS API response against the expected response params...
+All API response params as expected.
+
+FUNCTIONAL TEST b_rook_start_E3 PASSED.
+=============================================================================
+
+
+======================================================================
+****** Starting test case b_rook_start_S5 ******
+
+Test: b_rook_start_S5 specified in test definition file b_rook_start_S5.passtest
+
+Test Description:  Black Rook start Move, S5
+
+***Beginning test run of b_rook_start_S5***
+
+We have an API Request for b_rook_start_S5. Submit it to the SFCS API and save to log file.
+
+API Request for testcase b_rook_start_S5:
+ {"method" : "MakeMove","params": {"boardState": [{"type": "R", "loc": "a1"}, {"type": "K", "loc": "e1"}, {"type": "R", "loc": "h1"}, {"type": "r", "loc": "a8"}, {"type": "k", "loc": "e8"}, {"type": "r", "loc": "h8"}], "move": "Rhh3", "playerState": "b"},"id" : 1,"jsonrpc" : "2.0"}
+
+SFCS API Response:
+{'result': {'gameState': '', 'boardState': [{'type': 'R', 'loc': 'a1'}, {'type': 'K', 'loc': 'e1'}, {'type': 'R', 'loc': 'h1'}, {'type': 'r', 'loc': 'h3'}, {'type': 'r', 'loc': 'a8'}, {'type': 'k', 'loc': 'e8'}], 'playerState': 'w'}, 'id': 1}
+Checking our SFCS API response against the expected response params...
+All API response params as expected.
+
+FUNCTIONAL TEST b_rook_start_S5 PASSED.
+=============================================================================
+
+
+======================================================================
+****** Starting test case w_castling_kingside ******
+
+Test: w_castling_kingside specified in test definition file w_castling_kingside.passtest
+
+Test Description:  White KingSide Castling move test
+
+***Beginning test run of w_castling_kingside***
+
+We have an API Request for w_castling_kingside. Submit it to the SFCS API and save to log file.
+
+API Request for testcase w_castling_kingside:
+ {"method" : "MakeMove","params": {"boardState": [{"type": "R", "loc": "a1"}, {"type": "K", "loc": "e1"}, {"type": "R", "loc": "h1"}, {"type": "P", "loc": "a2"}, {"type": "P", "loc": "b2"}, {"type": "P", "loc": "c2"}, {"type": "P", "loc": "f2"}, {"type": "P", "loc": "g2"}, {"type": "P", "loc": "h2"}, {"type": "p", "loc": "a7"}, {"type": "p", "loc": "b7"}, {"type": "p", "loc": "c7"}, {"type": "p", "loc": "f7"}, {"type": "p", "loc": "g7"}, {"type": "p", "loc": "h7"}, {"type": "r", "loc": "a8"}, {"type": "k", "loc": "e8"}, {"type": "r", "loc": "h8"}], "move": "0-0", "playerState": "w"},"id" : 1,"jsonrpc" : "2.0"}
+
+Received an 'error' message in the SFCS API response:
+
+{'error': {'data': '0-0', 'message': 'Invalid move string.', 'code': -32020}, 'id': 1}
+Checking our SFCS API response against the expected response params...
+Found unexpected results in the API response!
+
+FUNCTIONAL TEST w_castling_kingside FAILED.
+Returned Failure Information:
+functionalTestFAIL: Received unexpected API response error {'error': {'data': '0-0', 'message': 'Invalid move string.', 'code': -32020}, 'id': 1}
+=============================================================================
+
+
+Moving on to next test...
+
+======================================================================
+****** Starting test case w_castling_queenside ******
+
+Test: w_castling_queenside specified in test definition file w_castling_queenside.passtest
+
+Test Description:  White QueenSide Castling move test
+
+***Beginning test run of w_castling_queenside***
+
+We have an API Request for w_castling_queenside. Submit it to the SFCS API and save to log file.
+
+API Request for testcase w_castling_queenside:
+ {"method" : "MakeMove","params": {"boardState": [{"loc": "a1", "type": "R"}, {"loc": "e1", "type": "K"}, {"loc": "h1", "type": "R"}, {"loc": "a2", "type": "P"}, {"loc": "b2", "type": "P"}, {"loc": "c2", "type": "P"}, {"loc": "f2", "type": "P"}, {"loc": "g2", "type": "P"}, {"loc": "h2", "type": "P"}, {"loc": "a7", "type": "p"}, {"loc": "b7", "type": "p"}, {"loc": "c7", "type": "p"}, {"loc": "f7", "type": "p"}, {"loc": "g7", "type": "p"}, {"loc": "h7", "type": "p"}, {"loc": "a8", "type": "r"}, {"loc": "e8", "type": "k"}, {"loc": "h8", "type": "r"}], "move": "0-0-0", "playerState": "w"},"id" : 1,"jsonrpc" : "2.0"}
+
+Received an 'error' message in the SFCS API response:
+
+{'error': {'data': '0-0-0', 'message': 'Invalid move string.', 'code': -32020}, 'id': 1}
+Checking our SFCS API response against the expected response params...
+Found unexpected results in the API response!
+
+FUNCTIONAL TEST w_castling_queenside FAILED.
+Returned Failure Information:
+functionalTestFAIL: Received unexpected API response error {'error': {'data': '0-0-0', 'message': 'Invalid move string.', 'code': -32020}, 'id': 1}
+=============================================================================
+
+
+Moving on to next test...
+
+======================================================================
+****** Starting test case w_kings_bishop_start_NE3 ******
+
+Test: w_kings_bishop_start_NE3 specified in test definition file w_kings_bishop_start_NE3.passtest
+
+Test Description:  White King's Bishop starting move NE
+
+***Beginning test run of w_kings_bishop_start_NE3***
+
+We have an API Request for w_kings_bishop_start_NE3. Submit it to the SFCS API and save to log file.
+
+API Request for testcase w_kings_bishop_start_NE3:
+ {"method" : "MakeMove","params": {"boardState": [{"type": "R", "loc": "a1"}, {"type": "N", "loc": "b1"}, {"type": "B", "loc": "c1"}, {"type": "Q", "loc": "d1"}, {"type": "K", "loc": "e1"}, {"type": "B", "loc": "f1"}, {"type": "N", "loc": "g1"}, {"type": "R", "loc": "h1"}, {"type": "P", "loc": "a2"}, {"type": "P", "loc": "b4"}, {"type": "P", "loc": "c2"}, {"type": "P", "loc": "d4"}, {"type": "P", "loc": "e4"}, {"type": "P", "loc": "f2"}, {"type": "P", "loc": "g4"}, {"type": "P", "loc": "h2"}, {"type": "p", "loc": "a7"}, {"type": "p", "loc": "b5"}, {"type": "p", "loc": "c7"}, {"type": "p", "loc": "d5"}, {"type": "p", "loc": "e5"}, {"type": "p", "loc": "f7"}, {"type": "p", "loc": "g5"}, {"type": "p", "loc": "h7"}, {"type": "r", "loc": "a8"}, {"type": "n", "loc": "b8"}, {"type": "b", "loc": "c8"}, {"type": "q", "loc": "d8"}, {"type": "k", "loc": "e8"}, {"type": "b", "loc": "f8"}, {"type": "n", "loc": "g8"}, {"type": "r", "loc": "h8"}], "move": "Bfc4", "playerState": "w"},"id" : 1,"jsonrpc" : "2.0"}
+
+SFCS API Response:
+{'result': {'gameState': '', 'boardState': [{'type': 'R', 'loc': 'a1'}, {'type': 'N', 'loc': 'b1'}, {'type': 'B', 'loc': 'c1'}, {'type': 'Q', 'loc': 'd1'}, {'type': 'K', 'loc': 'e1'}, {'type': 'N', 'loc': 'g1'}, {'type': 'R', 'loc': 'h1'}, {'type': 'P', 'loc': 'a2'}, {'type': 'P', 'loc': 'c2'}, {'type': 'P', 'loc': 'f2'}, {'type': 'P', 'loc': 'h2'}, {'type': 'P', 'loc': 'b4'}, {'type': 'B', 'loc': 'c4'}, {'type': 'P', 'loc': 'd4'}, {'type': 'P', 'loc': 'e4'}, {'type': 'P', 'loc': 'g4'}, {'type': 'p', 'loc': 'b5'}, {'type': 'p', 'loc': 'd5'}, {'type': 'p', 'loc': 'e5'}, {'type': 'p', 'loc': 'g5'}, {'type': 'p', 'loc': 'a7'}, {'type': 'p', 'loc': 'c7'}, {'type': 'p', 'loc': 'f7'}, {'type': 'p', 'loc': 'h7'}, {'type': 'r', 'loc': 'a8'}, {'type': 'n', 'loc': 'b8'}, {'type': 'b', 'loc': 'c8'}, {'type': 'q', 'loc': 'd8'}, {'type': 'k', 'loc': 'e8'}, {'type': 'b', 'loc': 'f8'}, {'type': 'n', 'loc': 'g8'}, {'type': 'r', 'loc': 'h8'}], 'playerState': 'b'}, 'id': 1}
+Checking our SFCS API response against the expected response params...
+All API response params as expected.
+
+FUNCTIONAL TEST w_kings_bishop_start_NE3 PASSED.
+=============================================================================
+
+
+======================================================================
+****** Starting test case w_kings_bishop_start_NW2 ******
+
+Test: w_kings_bishop_start_NW2 specified in test definition file w_kings_bishop_start_NW2.passtest
+
+Test Description:  White King's Bishop starting move NW
+
+***Beginning test run of w_kings_bishop_start_NW2***
+
+We have an API Request for w_kings_bishop_start_NW2. Submit it to the SFCS API and save to log file.
+
+API Request for testcase w_kings_bishop_start_NW2:
+ {"method" : "MakeMove","params": {"boardState": [{"loc": "a1", "type": "R"}, {"loc": "b1", "type": "N"}, {"loc": "c1", "type": "B"}, {"loc": "d1", "type": "Q"}, {"loc": "e1", "type": "K"}, {"loc": "f1", "type": "B"}, {"loc": "g1", "type": "N"}, {"loc": "h1", "type": "R"}, {"loc": "a2", "type": "P"}, {"loc": "b4", "type": "P"}, {"loc": "c2", "type": "P"}, {"loc": "d4", "type": "P"}, {"loc": "e4", "type": "P"}, {"loc": "f2", "type": "P"}, {"loc": "g4", "type": "P"}, {"loc": "h2", "type": "P"}, {"loc": "a7", "type": "p"}, {"loc": "b5", "type": "p"}, {"loc": "c7", "type": "p"}, {"loc": "d5", "type": "p"}, {"loc": "e5", "type": "p"}, {"loc": "f7", "type": "p"}, {"loc": "g5", "type": "p"}, {"loc": "h7", "type": "p"}, {"loc": "a8", "type": "r"}, {"loc": "b8", "type": "n"}, {"loc": "c8", "type": "b"}, {"loc": "d8", "type": "q"}, {"loc": "e8", "type": "k"}, {"loc": "f8", "type": "b"}, {"loc": "g8", "type": "n"}, {"loc": "h8", "type": "r"}], "move": "Bfh3", "playerState": "w"},"id" : 1,"jsonrpc" : "2.0"}
+
+SFCS API Response:
+{'result': {'gameState': '', 'boardState': [{'type': 'R', 'loc': 'a1'}, {'type': 'N', 'loc': 'b1'}, {'type': 'B', 'loc': 'c1'}, {'type': 'Q', 'loc': 'd1'}, {'type': 'K', 'loc': 'e1'}, {'type': 'N', 'loc': 'g1'}, {'type': 'R', 'loc': 'h1'}, {'type': 'P', 'loc': 'a2'}, {'type': 'P', 'loc': 'c2'}, {'type': 'P', 'loc': 'f2'}, {'type': 'P', 'loc': 'h2'}, {'type': 'B', 'loc': 'h3'}, {'type': 'P', 'loc': 'b4'}, {'type': 'P', 'loc': 'd4'}, {'type': 'P', 'loc': 'e4'}, {'type': 'P', 'loc': 'g4'}, {'type': 'p', 'loc': 'b5'}, {'type': 'p', 'loc': 'd5'}, {'type': 'p', 'loc': 'e5'}, {'type': 'p', 'loc': 'g5'}, {'type': 'p', 'loc': 'a7'}, {'type': 'p', 'loc': 'c7'}, {'type': 'p', 'loc': 'f7'}, {'type': 'p', 'loc': 'h7'}, {'type': 'r', 'loc': 'a8'}, {'type': 'n', 'loc': 'b8'}, {'type': 'b', 'loc': 'c8'}, {'type': 'q', 'loc': 'd8'}, {'type': 'k', 'loc': 'e8'}, {'type': 'b', 'loc': 'f8'}, {'type': 'n', 'loc': 'g8'}, {'type': 'r', 'loc': 'h8'}], 'playerState': 'b'}, 'id': 1}
+Checking our SFCS API response against the expected response params...
+All API response params as expected.
+
+FUNCTIONAL TEST w_kings_bishop_start_NW2 PASSED.
+=============================================================================
+
+
+======================================================================
+****** Starting test case w_king_b_king_stalemate ******
+
+Test: w_king_b_king_stalemate specified in test definition file w_king_b_king_stalemate.passtest
+
+Test Description:  Only two pieces on board, B & w Kings. Expected Stalemate.
+
+***Beginning test run of w_king_b_king_stalemate***
+
+We have an API Request for w_king_b_king_stalemate. Submit it to the SFCS API and save to log file.
+
+API Request for testcase w_king_b_king_stalemate:
+ {"method" : "MakeMove","params": {"boardState": [{"type": "K", "loc": "e1"}, {"type": "k", "loc": "e8"}], "move": "Kee2", "playerState": "w"},"id" : 1,"jsonrpc" : "2.0"}
+
+SFCS API Response:
+{'result': {'gameState': '', 'boardState': [{'type': 'K', 'loc': 'e2'}, {'type': 'k', 'loc': 'e8'}], 'playerState': 'b'}, 'id': 1}
+Checking our SFCS API response against the expected response params...
+Found unexpected results in the API response!
+
+FUNCTIONAL TEST w_king_b_king_stalemate FAILED.
+Returned Failure Information:
+functionalTestFAIL: API response of gameState:  does not equal the expected gameState: stalemate
+
+=============================================================================
+
+
+Moving on to next test...
+
+======================================================================
+****** Starting test case w_king_start_W1 ******
+
+Test: w_king_start_W1 specified in test definition file w_king_start_W1.passtest
+
+Test Description:  White King Start Move West
+
+***Beginning test run of w_king_start_W1***
+
+We have an API Request for w_king_start_W1. Submit it to the SFCS API and save to log file.
+
+API Request for testcase w_king_start_W1:
+ {"method" : "MakeMove","params": {"boardState": [{"type": "Q", "loc": "c1"}, {"type": "K", "loc": "e1"}, {"type": "q", "loc": "c8"}, {"type": "k", "loc": "e8"}], "move": "Kef1", "playerState": "w"},"id" : 1,"jsonrpc" : "2.0"}
+
+SFCS API Response:
+{'result': {'gameState': '', 'boardState': [{'type': 'Q', 'loc': 'c1'}, {'type': 'K', 'loc': 'f1'}, {'type': 'q', 'loc': 'c8'}, {'type': 'k', 'loc': 'e8'}], 'playerState': 'b'}, 'id': 1}
+Checking our SFCS API response against the expected response params...
+All API response params as expected.
+
+FUNCTIONAL TEST w_king_start_W1 PASSED.
+=============================================================================
+
+
+======================================================================
+****** Starting test case w_knight_start_jump_pawn_NW ******
+
+Test: w_knight_start_jump_pawn_NW specified in test definition file w_knight_start_jump_pawn_NW.passtest
+
+Test Description:  White Knight Starting Move Right, jumping pawn
+
+***Beginning test run of w_knight_start_jump_pawn_NW***
+
+We have an API Request for w_knight_start_jump_pawn_NW. Submit it to the SFCS API and save to log file.
+
+API Request for testcase w_knight_start_jump_pawn_NW:
+ {"method" : "MakeMove","params": {"boardState": [{"loc": "a1", "type": "R"}, {"loc": "b1", "type": "N"}, {"loc": "c1", "type": "B"}, {"loc": "d1", "type": "Q"}, {"loc": "e1", "type": "K"}, {"loc": "f1", "type": "B"}, {"loc": "g1", "type": "N"}, {"loc": "h1", "type": "R"}, {"loc": "a2", "type": "P"}, {"loc": "b2", "type": "P"}, {"loc": "c2", "type": "P"}, {"loc": "d2", "type": "P"}, {"loc": "e2", "type": "P"}, {"loc": "f2", "type": "P"}, {"loc": "g2", "type": "P"}, {"loc": "h2", "type": "P"}, {"loc": "a7", "type": "p"}, {"loc": "b7", "type": "p"}, {"loc": "c7", "type": "p"}, {"loc": "d7", "type": "p"}, {"loc": "e7", "type": "p"}, {"loc": "f7", "type": "p"}, {"loc": "g7", "type": "p"}, {"loc": "h7", "type": "p"}, {"loc": "a8", "type": "r"}, {"loc": "b8", "type": "n"}, {"loc": "c8", "type": "b"}, {"loc": "d8", "type": "q"}, {"loc": "e8", "type": "k"}, {"loc": "f8", "type": "b"}, {"loc": "g8", "type": "n"}, {"loc": "h8", "type": "r"}], "move": "Nbc3", "playerState": "w"},"id" : 1,"jsonrpc" : "2.0"}
+
+SFCS API Response:
+{'result': {'gameState': '', 'boardState': [{'type': 'R', 'loc': 'a1'}, {'type': 'B', 'loc': 'c1'}, {'type': 'Q', 'loc': 'd1'}, {'type': 'K', 'loc': 'e1'}, {'type': 'B', 'loc': 'f1'}, {'type': 'N', 'loc': 'g1'}, {'type': 'R', 'loc': 'h1'}, {'type': 'P', 'loc': 'a2'}, {'type': 'P', 'loc': 'b2'}, {'type': 'P', 'loc': 'c2'}, {'type': 'P', 'loc': 'd2'}, {'type': 'P', 'loc': 'e2'}, {'type': 'P', 'loc': 'f2'}, {'type': 'P', 'loc': 'g2'}, {'type': 'P', 'loc': 'h2'}, {'type': 'N', 'loc': 'c3'}, {'type': 'p', 'loc': 'a7'}, {'type': 'p', 'loc': 'b7'}, {'type': 'p', 'loc': 'c7'}, {'type': 'p', 'loc': 'd7'}, {'type': 'p', 'loc': 'e7'}, {'type': 'p', 'loc': 'f7'}, {'type': 'p', 'loc': 'g7'}, {'type': 'p', 'loc': 'h7'}, {'type': 'r', 'loc': 'a8'}, {'type': 'n', 'loc': 'b8'}, {'type': 'b', 'loc': 'c8'}, {'type': 'q', 'loc': 'd8'}, {'type': 'k', 'loc': 'e8'}, {'type': 'b', 'loc': 'f8'}, {'type': 'n', 'loc': 'g8'}, {'type': 'r', 'loc': 'h8'}], 'playerState': 'b'}, 'id': 1}
+Checking our SFCS API response against the expected response params...
+All API response params as expected.
+
+FUNCTIONAL TEST w_knight_start_jump_pawn_NW PASSED.
+=============================================================================
+
+
+======================================================================
+****** Starting test case w_knight_start_jump_SE ******
+
+Test: w_knight_start_jump_SE specified in test definition file w_knight_start_jump_SE.passtest
+
+Test Description:  White Knight starting move left over pawn
+
+***Beginning test run of w_knight_start_jump_SE***
+
+We have an API Request for w_knight_start_jump_SE. Submit it to the SFCS API and save to log file.
+
+API Request for testcase w_knight_start_jump_SE:
+ {"method" : "MakeMove","params": {"boardState": [{"loc": "a1", "type": "R"}, {"loc": "b1", "type": "N"}, {"loc": "c1", "type": "B"}, {"loc": "d1", "type": "Q"}, {"loc": "e1", "type": "K"}, {"loc": "f1", "type": "B"}, {"loc": "g1", "type": "N"}, {"loc": "h1", "type": "R"}, {"loc": "a2", "type": "P"}, {"loc": "b2", "type": "P"}, {"loc": "c2", "type": "P"}, {"loc": "d2", "type": "P"}, {"loc": "e2", "type": "P"}, {"loc": "f2", "type": "P"}, {"loc": "g2", "type": "P"}, {"loc": "h2", "type": "P"}, {"loc": "a7", "type": "p"}, {"loc": "b7", "type": "p"}, {"loc": "c7", "type": "p"}, {"loc": "d7", "type": "p"}, {"loc": "e7", "type": "p"}, {"loc": "f7", "type": "p"}, {"loc": "g7", "type": "p"}, {"loc": "h7", "type": "p"}, {"loc": "a8", "type": "r"}, {"loc": "b8", "type": "n"}, {"loc": "c8", "type": "b"}, {"loc": "d8", "type": "q"}, {"loc": "e8", "type": "k"}, {"loc": "f8", "type": "b"}, {"loc": "g8", "type": "n"}, {"loc": "h8", "type": "r"}], "move": "Ngf3", "playerState": "w"},"id" : 1,"jsonrpc" : "2.0"}
+
+SFCS API Response:
+{'result': {'gameState': '', 'boardState': [{'type': 'R', 'loc': 'a1'}, {'type': 'N', 'loc': 'b1'}, {'type': 'B', 'loc': 'c1'}, {'type': 'Q', 'loc': 'd1'}, {'type': 'K', 'loc': 'e1'}, {'type': 'B', 'loc': 'f1'}, {'type': 'R', 'loc': 'h1'}, {'type': 'P', 'loc': 'a2'}, {'type': 'P', 'loc': 'b2'}, {'type': 'P', 'loc': 'c2'}, {'type': 'P', 'loc': 'd2'}, {'type': 'P', 'loc': 'e2'}, {'type': 'P', 'loc': 'f2'}, {'type': 'P', 'loc': 'g2'}, {'type': 'P', 'loc': 'h2'}, {'type': 'N', 'loc': 'f3'}, {'type': 'p', 'loc': 'a7'}, {'type': 'p', 'loc': 'b7'}, {'type': 'p', 'loc': 'c7'}, {'type': 'p', 'loc': 'd7'}, {'type': 'p', 'loc': 'e7'}, {'type': 'p', 'loc': 'f7'}, {'type': 'p', 'loc': 'g7'}, {'type': 'p', 'loc': 'h7'}, {'type': 'r', 'loc': 'a8'}, {'type': 'n', 'loc': 'b8'}, {'type': 'b', 'loc': 'c8'}, {'type': 'q', 'loc': 'd8'}, {'type': 'k', 'loc': 'e8'}, {'type': 'b', 'loc': 'f8'}, {'type': 'n', 'loc': 'g8'}, {'type': 'r', 'loc': 'h8'}], 'playerState': 'b'}, 'id': 1}
+Checking our SFCS API response against the expected response params...
+All API response params as expected.
+
+FUNCTIONAL TEST w_knight_start_jump_SE PASSED.
+=============================================================================
+
+
+======================================================================
+****** Starting test case w_pawn_captures_bishop_NW1 ******
+
+Test: w_pawn_captures_bishop_NW1 specified in test definition file w_pawn_captures_bishop_NW1.passtest
+
+Test Description:  White Pawn captures bishop
+
+***Beginning test run of w_pawn_captures_bishop_NW1***
+
+We have an API Request for w_pawn_captures_bishop_NW1. Submit it to the SFCS API and save to log file.
+
+API Request for testcase w_pawn_captures_bishop_NW1:
+ {"method" : "MakeMove","params": {"boardState": [{"loc": "a1", "type": "R"}, {"loc": "d1", "type": "Q"}, {"loc": "e1", "type": "K"}, {"loc": "e8", "type": "k"}, {"loc": "h8", "type": "r"}, {"loc": "b3", "type": "P"}, {"loc": "c3", "type": "P"}, {"loc": "b4", "type": "b"}, {"loc": "f6", "type": "p"}, {"loc": "g6", "type": "p"}, {"loc": "g5", "type": "B"}], "move": "cxb4", "playerState": "w"},"id" : 1,"jsonrpc" : "2.0"}
+
+SFCS API Response:
+{'result': {'gameState': '', 'boardState': [{'type': 'R', 'loc': 'a1'}, {'type': 'Q', 'loc': 'd1'}, {'type': 'K', 'loc': 'e1'}, {'type': 'P', 'loc': 'b3'}, {'type': 'P', 'loc': 'b4'}, {'type': 'B', 'loc': 'g5'}, {'type': 'p', 'loc': 'f6'}, {'type': 'p', 'loc': 'g6'}, {'type': 'k', 'loc': 'e8'}, {'type': 'r', 'loc': 'h8'}], 'playerState': 'b'}, 'id': 1}
+Checking our SFCS API response against the expected response params...
+All API response params as expected.
+
+FUNCTIONAL TEST w_pawn_captures_bishop_NW1 PASSED.
+=============================================================================
+
+
+======================================================================
+****** Starting test case w_pawn_enpassant_capture_NW1 ******
+
+Test: w_pawn_enpassant_capture_NW1 specified in test definition file w_pawn_enpassant_capture_NW1.passtest
+
+Test Description:  White Pawn En Passant Capture, no check
+
+***Beginning test run of w_pawn_enpassant_capture_NW1***
+
+We have an API Request for w_pawn_enpassant_capture_NW1. Submit it to the SFCS API and save to log file.
+
+API Request for testcase w_pawn_enpassant_capture_NW1:
+ {"method" : "MakeMove","params": {"boardState": [{"loc": "a1", "type": "R"}, {"loc": "b1", "type": "N"}, {"loc": "c1", "type": "B"}, {"loc": "d1", "type": "Q"}, {"loc": "e1", "type": "K"}, {"loc": "f1", "type": "B"}, {"loc": "g1", "type": "N"}, {"loc": "h1", "type": "R"}, {"loc": "a2", "type": "P"}, {"loc": "b2", "type": "P"}, {"loc": "c2", "type": "P"}, {"loc": "d2", "type": "P"}, {"loc": "e5", "type": "P"}, {"loc": "f2", "type": "P"}, {"loc": "g2", "type": "P"}, {"loc": "h2", "type": "P"}, {"loc": "a7", "type": "p"}, {"loc": "b6", "type": "p"}, {"loc": "c7", "type": "p"}, {"loc": "d5", "type": "p"}, {"loc": "e7", "type": "p"}, {"loc": "f7", "type": "p"}, {"loc": "g7", "type": "p"}, {"loc": "h7", "type": "p"}, {"loc": "a8", "type": "r"}, {"loc": "b8", "type": "n"}, {"loc": "c8", "type": "b"}, {"loc": "d8", "type": "q"}, {"loc": "e8", "type": "k"}, {"loc": "f8", "type": "b"}, {"loc": "g8", "type": "n"}, {"loc": "h8", "type": "r"}], "move": "exd6(ep)", "playerState": "w"},"id" : 1,"jsonrpc" : "2.0"}
+
+Received an 'error' message in the SFCS API response:
+
+{'error': {'data': 'exd6(ep)', 'message': 'Invalid move string.', 'code': -32020}, 'id': 1}
+Checking our SFCS API response against the expected response params...
+Found unexpected results in the API response!
+
+FUNCTIONAL TEST w_pawn_enpassant_capture_NW1 FAILED.
+Returned Failure Information:
+functionalTestFAIL: Received unexpected API response error {'error': {'data': 'exd6(ep)', 'message': 'Invalid move string.', 'code': -32020}, 'id': 1}
+=============================================================================
+
+
+Moving on to next test...
+
+======================================================================
+****** Starting test case w_pawn_promotion_to_queen_check_N1 ******
+
+Test: w_pawn_promotion_to_queen_check_N1 specified in test definition file w_pawn_promotion_to_queen_check_N1.passtest
+
+Test Description:  White Pawn Promotion to White Queen, no capture
+
+***Beginning test run of w_pawn_promotion_to_queen_check_N1***
+
+We have an API Request for w_pawn_promotion_to_queen_check_N1. Submit it to the SFCS API and save to log file.
+
+API Request for testcase w_pawn_promotion_to_queen_check_N1:
+ {"method" : "MakeMove","params": {"boardState": [{"type": "K", "loc": "e1"}, {"type": "k", "loc": "e8"}, {"type": "Q", "loc": "b2"}, {"type": "p", "loc": "g2"}, {"type": "q", "loc": "a6"}, {"type": "P", "loc": "g7"}], "move": "g8=Q", "playerState": "w"},"id" : 1,"jsonrpc" : "2.0"}
+
+SFCS API Response:
+{'result': {'gameState': 'check', 'boardState': [{'type': 'K', 'loc': 'e1'}, {'type': 'Q', 'loc': 'b2'}, {'type': 'p', 'loc': 'g2'}, {'type': 'q', 'loc': 'a6'}, {'type': 'k', 'loc': 'e8'}, {'type': 'Q', 'loc': 'g8'}], 'playerState': 'b'}, 'id': 1}
+Checking our SFCS API response against the expected response params...
+All API response params as expected.
+
+FUNCTIONAL TEST w_pawn_promotion_to_queen_check_N1 PASSED.
+=============================================================================
+
+
+======================================================================
+****** Starting test case w_pawn_start_N1 ******
+
+Test: w_pawn_start_N1 specified in test definition file w_pawn_start_N1.passtest
+
+Test Description:  White Pawn starting move on start board, 1 square
+
+***Beginning test run of w_pawn_start_N1***
+
+We have an API Request for w_pawn_start_N1. Submit it to the SFCS API and save to log file.
+
+API Request for testcase w_pawn_start_N1:
+ {"method" : "MakeMove","params": {"boardState": [{"loc": "a1", "type": "R"}, {"loc": "b1", "type": "N"}, {"loc": "c1", "type": "B"}, {"loc": "d1", "type": "Q"}, {"loc": "e1", "type": "K"}, {"loc": "f1", "type": "B"}, {"loc": "g1", "type": "N"}, {"loc": "h1", "type": "R"}, {"loc": "a2", "type": "P"}, {"loc": "b2", "type": "P"}, {"loc": "c2", "type": "P"}, {"loc": "d2", "type": "P"}, {"loc": "e2", "type": "P"}, {"loc": "f2", "type": "P"}, {"loc": "g2", "type": "P"}, {"loc": "h2", "type": "P"}, {"loc": "a7", "type": "p"}, {"loc": "b7", "type": "p"}, {"loc": "c7", "type": "p"}, {"loc": "d7", "type": "p"}, {"loc": "e7", "type": "p"}, {"loc": "f7", "type": "p"}, {"loc": "g7", "type": "p"}, {"loc": "h7", "type": "p"}, {"loc": "a8", "type": "r"}, {"loc": "b8", "type": "n"}, {"loc": "c8", "type": "b"}, {"loc": "d8", "type": "q"}, {"loc": "e8", "type": "k"}, {"loc": "f8", "type": "b"}, {"loc": "g8", "type": "n"}, {"loc": "h8", "type": "r"}], "move": "d3", "playerState": "w"},"id" : 1,"jsonrpc" : "2.0"}
+
+SFCS API Response:
+{'result': {'gameState': '', 'boardState': [{'type': 'R', 'loc': 'a1'}, {'type': 'N', 'loc': 'b1'}, {'type': 'B', 'loc': 'c1'}, {'type': 'Q', 'loc': 'd1'}, {'type': 'K', 'loc': 'e1'}, {'type': 'B', 'loc': 'f1'}, {'type': 'N', 'loc': 'g1'}, {'type': 'R', 'loc': 'h1'}, {'type': 'P', 'loc': 'a2'}, {'type': 'P', 'loc': 'b2'}, {'type': 'P', 'loc': 'c2'}, {'type': 'P', 'loc': 'e2'}, {'type': 'P', 'loc': 'f2'}, {'type': 'P', 'loc': 'g2'}, {'type': 'P', 'loc': 'h2'}, {'type': 'P', 'loc': 'd3'}, {'type': 'p', 'loc': 'a7'}, {'type': 'p', 'loc': 'b7'}, {'type': 'p', 'loc': 'c7'}, {'type': 'p', 'loc': 'd7'}, {'type': 'p', 'loc': 'e7'}, {'type': 'p', 'loc': 'f7'}, {'type': 'p', 'loc': 'g7'}, {'type': 'p', 'loc': 'h7'}, {'type': 'r', 'loc': 'a8'}, {'type': 'n', 'loc': 'b8'}, {'type': 'b', 'loc': 'c8'}, {'type': 'q', 'loc': 'd8'}, {'type': 'k', 'loc': 'e8'}, {'type': 'b', 'loc': 'f8'}, {'type': 'n', 'loc': 'g8'}, {'type': 'r', 'loc': 'h8'}], 'playerState': 'b'}, 'id': 1}
+Checking our SFCS API response against the expected response params...
+All API response params as expected.
+
+FUNCTIONAL TEST w_pawn_start_N1 PASSED.
+=============================================================================
+
+
+======================================================================
+****** Starting test case w_pawn_start_N2 ******
+
+Test: w_pawn_start_N2 specified in test definition file w_pawn_start_N2.passtest
+
+Test Description:  White Pawn starting move on starting board - 2 squares
+
+***Beginning test run of w_pawn_start_N2***
+
+We have an API Request for w_pawn_start_N2. Submit it to the SFCS API and save to log file.
+
+API Request for testcase w_pawn_start_N2:
+ {"method" : "MakeMove","params": {"boardState": [{"loc": "a1", "type": "R"}, {"loc": "b1", "type": "N"}, {"loc": "c1", "type": "B"}, {"loc": "d1", "type": "Q"}, {"loc": "e1", "type": "K"}, {"loc": "f1", "type": "B"}, {"loc": "g1", "type": "N"}, {"loc": "h1", "type": "R"}, {"loc": "a2", "type": "P"}, {"loc": "b2", "type": "P"}, {"loc": "c2", "type": "P"}, {"loc": "d2", "type": "P"}, {"loc": "e2", "type": "P"}, {"loc": "f2", "type": "P"}, {"loc": "g2", "type": "P"}, {"loc": "h2", "type": "P"}, {"loc": "a7", "type": "p"}, {"loc": "b7", "type": "p"}, {"loc": "c7", "type": "p"}, {"loc": "d7", "type": "p"}, {"loc": "e7", "type": "p"}, {"loc": "f7", "type": "p"}, {"loc": "g7", "type": "p"}, {"loc": "h7", "type": "p"}, {"loc": "a8", "type": "r"}, {"loc": "b8", "type": "n"}, {"loc": "c8", "type": "b"}, {"loc": "d8", "type": "q"}, {"loc": "e8", "type": "k"}, {"loc": "f8", "type": "b"}, {"loc": "g8", "type": "n"}, {"loc": "h8", "type": "r"}], "move": "e4", "playerState": "w"},"id" : 1,"jsonrpc" : "2.0"}
+
+SFCS API Response:
+{'result': {'gameState': '', 'boardState': [{'type': 'R', 'loc': 'a1'}, {'type': 'N', 'loc': 'b1'}, {'type': 'B', 'loc': 'c1'}, {'type': 'Q', 'loc': 'd1'}, {'type': 'K', 'loc': 'e1'}, {'type': 'B', 'loc': 'f1'}, {'type': 'N', 'loc': 'g1'}, {'type': 'R', 'loc': 'h1'}, {'type': 'P', 'loc': 'a2'}, {'type': 'P', 'loc': 'b2'}, {'type': 'P', 'loc': 'c2'}, {'type': 'P', 'loc': 'd2'}, {'type': 'P', 'loc': 'f2'}, {'type': 'P', 'loc': 'g2'}, {'type': 'P', 'loc': 'h2'}, {'type': 'P', 'loc': 'e4'}, {'type': 'p', 'loc': 'a7'}, {'type': 'p', 'loc': 'b7'}, {'type': 'p', 'loc': 'c7'}, {'type': 'p', 'loc': 'd7'}, {'type': 'p', 'loc': 'e7'}, {'type': 'p', 'loc': 'f7'}, {'type': 'p', 'loc': 'g7'}, {'type': 'p', 'loc': 'h7'}, {'type': 'r', 'loc': 'a8'}, {'type': 'n', 'loc': 'b8'}, {'type': 'b', 'loc': 'c8'}, {'type': 'q', 'loc': 'd8'}, {'type': 'k', 'loc': 'e8'}, {'type': 'b', 'loc': 'f8'}, {'type': 'n', 'loc': 'g8'}, {'type': 'r', 'loc': 'h8'}], 'playerState': 'b'}, 'id': 1}
+Checking our SFCS API response against the expected response params...
+All API response params as expected.
+
+FUNCTIONAL TEST w_pawn_start_N2 PASSED.
+=============================================================================
+
+
+======================================================================
+****** Starting test case w_queens_bishop_start_NE2 ******
+
+Test: w_queens_bishop_start_NE2 specified in test definition file w_queens_bishop_start_NE2.passtest
+
+Test Description:  White Queen's Bishop starting move NW
+
+***Beginning test run of w_queens_bishop_start_NE2***
+
+We have an API Request for w_queens_bishop_start_NE2. Submit it to the SFCS API and save to log file.
+
+API Request for testcase w_queens_bishop_start_NE2:
+ {"method" : "MakeMove","params": {"boardState": [{"type": "R", "loc": "a1"}, {"type": "N", "loc": "b1"}, {"type": "B", "loc": "c1"}, {"type": "Q", "loc": "d1"}, {"type": "K", "loc": "e1"}, {"type": "B", "loc": "f1"}, {"type": "N", "loc": "g1"}, {"type": "R", "loc": "h1"}, {"type": "P", "loc": "a2"}, {"type": "P", "loc": "b4"}, {"type": "P", "loc": "c2"}, {"type": "P", "loc": "d4"}, {"type": "P", "loc": "e4"}, {"type": "P", "loc": "f2"}, {"type": "P", "loc": "g4"}, {"type": "P", "loc": "h2"}, {"type": "p", "loc": "a7"}, {"type": "p", "loc": "b5"}, {"type": "p", "loc": "c7"}, {"type": "p", "loc": "d5"}, {"type": "p", "loc": "e5"}, {"type": "p", "loc": "f7"}, {"type": "p", "loc": "g5"}, {"type": "p", "loc": "h7"}, {"type": "r", "loc": "a8"}, {"type": "n", "loc": "b8"}, {"type": "b", "loc": "c8"}, {"type": "q", "loc": "d8"}, {"type": "k", "loc": "e8"}, {"type": "b", "loc": "f8"}, {"type": "n", "loc": "g8"}, {"type": "r", "loc": "h8"}], "move": "Bca3", "playerState": "w"},"id" : 1,"jsonrpc" : "2.0"}
+
+SFCS API Response:
+{'result': {'gameState': '', 'boardState': [{'type': 'R', 'loc': 'a1'}, {'type': 'N', 'loc': 'b1'}, {'type': 'Q', 'loc': 'd1'}, {'type': 'K', 'loc': 'e1'}, {'type': 'B', 'loc': 'f1'}, {'type': 'N', 'loc': 'g1'}, {'type': 'R', 'loc': 'h1'}, {'type': 'P', 'loc': 'a2'}, {'type': 'P', 'loc': 'c2'}, {'type': 'P', 'loc': 'f2'}, {'type': 'P', 'loc': 'h2'}, {'type': 'B', 'loc': 'a3'}, {'type': 'P', 'loc': 'b4'}, {'type': 'P', 'loc': 'd4'}, {'type': 'P', 'loc': 'e4'}, {'type': 'P', 'loc': 'g4'}, {'type': 'p', 'loc': 'b5'}, {'type': 'p', 'loc': 'd5'}, {'type': 'p', 'loc': 'e5'}, {'type': 'p', 'loc': 'g5'}, {'type': 'p', 'loc': 'a7'}, {'type': 'p', 'loc': 'c7'}, {'type': 'p', 'loc': 'f7'}, {'type': 'p', 'loc': 'h7'}, {'type': 'r', 'loc': 'a8'}, {'type': 'n', 'loc': 'b8'}, {'type': 'b', 'loc': 'c8'}, {'type': 'q', 'loc': 'd8'}, {'type': 'k', 'loc': 'e8'}, {'type': 'b', 'loc': 'f8'}, {'type': 'n', 'loc': 'g8'}, {'type': 'r', 'loc': 'h8'}], 'playerState': 'b'}, 'id': 1}
+Checking our SFCS API response against the expected response params...
+All API response params as expected.
+
+FUNCTIONAL TEST w_queens_bishop_start_NE2 PASSED.
+=============================================================================
+
+
+======================================================================
+****** Starting test case w_queens_bishop_start_NW ******
+
+Test: w_queens_bishop_start_NW specified in test definition file w_queens_bishop_start_NW.passtest
+
+Test Description:  White Queen's Bishop Starting Move NW
+
+***Beginning test run of w_queens_bishop_start_NW***
+
+We have an API Request for w_queens_bishop_start_NW. Submit it to the SFCS API and save to log file.
+
+API Request for testcase w_queens_bishop_start_NW:
+ {"method" : "MakeMove","params": {"boardState": [{"type": "R", "loc": "a1"}, {"type": "N", "loc": "b1"}, {"type": "B", "loc": "c1"}, {"type": "Q", "loc": "d1"}, {"type": "K", "loc": "e1"}, {"type": "B", "loc": "f1"}, {"type": "N", "loc": "g1"}, {"type": "R", "loc": "h1"}, {"type": "P", "loc": "a2"}, {"type": "P", "loc": "b4"}, {"type": "P", "loc": "c2"}, {"type": "P", "loc": "d4"}, {"type": "P", "loc": "e4"}, {"type": "P", "loc": "f2"}, {"type": "P", "loc": "g4"}, {"type": "P", "loc": "h2"}, {"type": "p", "loc": "a7"}, {"type": "p", "loc": "b5"}, {"type": "p", "loc": "c7"}, {"type": "p", "loc": "d5"}, {"type": "p", "loc": "e5"}, {"type": "p", "loc": "f7"}, {"type": "p", "loc": "g5"}, {"type": "p", "loc": "h7"}, {"type": "r", "loc": "a8"}, {"type": "n", "loc": "b8"}, {"type": "b", "loc": "c8"}, {"type": "q", "loc": "d8"}, {"type": "k", "loc": "e8"}, {"type": "b", "loc": "f8"}, {"type": "n", "loc": "g8"}, {"type": "r", "loc": "h8"}], "move": "Bcf4", "playerState": "w"},"id" : 1,"jsonrpc" : "2.0"}
+
+SFCS API Response:
+{'result': {'gameState': '', 'boardState': [{'type': 'R', 'loc': 'a1'}, {'type': 'N', 'loc': 'b1'}, {'type': 'Q', 'loc': 'd1'}, {'type': 'K', 'loc': 'e1'}, {'type': 'B', 'loc': 'f1'}, {'type': 'N', 'loc': 'g1'}, {'type': 'R', 'loc': 'h1'}, {'type': 'P', 'loc': 'a2'}, {'type': 'P', 'loc': 'c2'}, {'type': 'P', 'loc': 'f2'}, {'type': 'P', 'loc': 'h2'}, {'type': 'P', 'loc': 'b4'}, {'type': 'P', 'loc': 'd4'}, {'type': 'P', 'loc': 'e4'}, {'type': 'B', 'loc': 'f4'}, {'type': 'P', 'loc': 'g4'}, {'type': 'p', 'loc': 'b5'}, {'type': 'p', 'loc': 'd5'}, {'type': 'p', 'loc': 'e5'}, {'type': 'p', 'loc': 'g5'}, {'type': 'p', 'loc': 'a7'}, {'type': 'p', 'loc': 'c7'}, {'type': 'p', 'loc': 'f7'}, {'type': 'p', 'loc': 'h7'}, {'type': 'r', 'loc': 'a8'}, {'type': 'n', 'loc': 'b8'}, {'type': 'b', 'loc': 'c8'}, {'type': 'q', 'loc': 'd8'}, {'type': 'k', 'loc': 'e8'}, {'type': 'b', 'loc': 'f8'}, {'type': 'n', 'loc': 'g8'}, {'type': 'r', 'loc': 'h8'}], 'playerState': 'b'}, 'id': 1}
+Checking our SFCS API response against the expected response params...
+All API response params as expected.
+
+FUNCTIONAL TEST w_queens_bishop_start_NW PASSED.
+=============================================================================
+
+
+======================================================================
+****** Starting test case w_queen_start_NE3 ******
+
+Test: w_queen_start_NE3 specified in test definition file w_queen_start_NE3.passtest
+
+Test Description:  White Queen Start Move
+
+***Beginning test run of w_queen_start_NE3***
+
+We have an API Request for w_queen_start_NE3. Submit it to the SFCS API and save to log file.
+
+API Request for testcase w_queen_start_NE3:
+ {"method" : "MakeMove","params": {"boardState": [{"loc": "d1", "type": "Q"}, {"loc": "g2", "type": "K"}, {"loc": "d8", "type": "q"}, {"loc": "b7", "type": "k"}], "move": "Qda4", "playerState": "w"},"id" : 1,"jsonrpc" : "2.0"}
+
+SFCS API Response:
+{'result': {'gameState': '', 'boardState': [{'type': 'K', 'loc': 'g2'}, {'type': 'Q', 'loc': 'a4'}, {'type': 'k', 'loc': 'b7'}, {'type': 'q', 'loc': 'd8'}], 'playerState': 'b'}, 'id': 1}
+Checking our SFCS API response against the expected response params...
+All API response params as expected.
+
+FUNCTIONAL TEST w_queen_start_NE3 PASSED.
+=============================================================================
+
+
+======================================================================
+****** Starting test case w_rook_checkmate_N5 ******
+
+Test: w_rook_checkmate_N5 specified in test definition file w_rook_checkmate_N5.passtest
+
+Test Description:  White Rook moves for checkmate
+
+***Beginning test run of w_rook_checkmate_N5***
+
+We have an API Request for w_rook_checkmate_N5. Submit it to the SFCS API and save to log file.
+
+API Request for testcase w_rook_checkmate_N5:
+ {"method" : "MakeMove","params": {"boardState": [{"loc": "c7", "type": "R"}, {"loc": "e1", "type": "K"}, {"loc": "g3", "type": "R"}, {"loc": "c5", "type": "r"}, {"loc": "e8", "type": "k"}, {"loc": "h6", "type": "r"}], "move": "Rgg8#", "playerState": "w"},"id" : 1,"jsonrpc" : "2.0"}
+
+SFCS API Response:
+{'result': {'gameState': 'checkmate', 'boardState': [{'type': 'K', 'loc': 'e1'}, {'type': 'r', 'loc': 'c5'}, {'type': 'r', 'loc': 'h6'}, {'type': 'R', 'loc': 'c7'}, {'type': 'k', 'loc': 'e8'}, {'type': 'R', 'loc': 'g8'}], 'playerState': 'b'}, 'id': 1}
+Checking our SFCS API response against the expected response params...
+All API response params as expected.
+
+FUNCTIONAL TEST w_rook_checkmate_N5 PASSED.
+=============================================================================
+
+
+======================================================================
+****** Starting test case w_rook_check_N5 ******
+
+Test: w_rook_check_N5 specified in test definition file w_rook_check_N5.passtest
+
+Test Description:  White Rook moves for Check
+
+***Beginning test run of w_rook_check_N5***
+
+We have an API Request for w_rook_check_N5. Submit it to the SFCS API and save to log file.
+
+API Request for testcase w_rook_check_N5:
+ {"method" : "MakeMove","params": {"boardState": [{"loc": "c7", "type": "R"}, {"loc": "e1", "type": "K"}, {"loc": "h3", "type": "R"}, {"loc": "c5", "type": "r"}, {"loc": "e8", "type": "k"}, {"loc": "f6", "type": "r"}], "move": "Rhh8#", "playerState": "w"},"id" : 1,"jsonrpc" : "2.0"}
+
+SFCS API Response:
+{'result': {'gameState': 'check', 'boardState': [{'type': 'K', 'loc': 'e1'}, {'type': 'r', 'loc': 'c5'}, {'type': 'r', 'loc': 'f6'}, {'type': 'R', 'loc': 'c7'}, {'type': 'k', 'loc': 'e8'}, {'type': 'R', 'loc': 'h8'}], 'playerState': 'b'}, 'id': 1}
+Checking our SFCS API response against the expected response params...
+All API response params as expected.
+
+FUNCTIONAL TEST w_rook_check_N5 PASSED.
+=============================================================================
+
+
+======================================================================
+****** Starting test case w_rook_start_move ******
+
+Test: w_rook_start_move specified in test definition file w_rook_start_move.passtest
+
+Test Description:  White Rook Moving from start position
+
+***Beginning test run of w_rook_start_move***
+
+We have an API Request for w_rook_start_move. Submit it to the SFCS API and save to log file.
+
+API Request for testcase w_rook_start_move:
+ {"method" : "MakeMove","params": {"boardState": [{"type": "R", "loc": "a1"}, {"type": "K", "loc": "e1"}, {"type": "R", "loc": "h1"}, {"type": "r", "loc": "a8"}, {"type": "k", "loc": "e8"}, {"type": "r", "loc": "h8"}], "move": "Rad1", "playerState": "w"},"id" : 1,"jsonrpc" : "2.0"}
+
+SFCS API Response:
+{'result': {'gameState': '', 'boardState': [{'type': 'R', 'loc': 'd1'}, {'type': 'K', 'loc': 'e1'}, {'type': 'R', 'loc': 'h1'}, {'type': 'r', 'loc': 'a8'}, {'type': 'k', 'loc': 'e8'}, {'type': 'r', 'loc': 'h8'}], 'playerState': 'b'}, 'id': 1}
+Checking our SFCS API response against the expected response params...
+All API response params as expected.
+
+FUNCTIONAL TEST w_rook_start_move PASSED.
+=============================================================================
+
+
+======================================================================
+****** Starting test case b_pawn_starts_first_move_error ******
+
+Test: b_pawn_starts_first_move_error specified in test definition file b_pawn_starts_first_move_error.expfail
+
+Test Description:  Black Pawn moves first on a starting board - expected Move Error
+
+***Beginning test run of b_pawn_starts_first_move_error***
+
+We have an API Request for b_pawn_starts_first_move_error. Submit it to the SFCS API and save to log file.
+
+API Request for testcase b_pawn_starts_first_move_error:
+ {"method" : "MakeMove","params": {"boardState": [{"loc": "a1", "type": "R"}, {"loc": "b1", "type": "N"}, {"loc": "c1", "type": "B"}, {"loc": "d1", "type": "Q"}, {"loc": "e1", "type": "K"}, {"loc": "f1", "type": "B"}, {"loc": "g1", "type": "N"}, {"loc": "h1", "type": "R"}, {"loc": "a2", "type": "P"}, {"loc": "b2", "type": "P"}, {"loc": "c2", "type": "P"}, {"loc": "d2", "type": "P"}, {"loc": "e2", "type": "P"}, {"loc": "f2", "type": "P"}, {"loc": "g2", "type": "P"}, {"loc": "h2", "type": "P"}, {"loc": "a7", "type": "p"}, {"loc": "b7", "type": "p"}, {"loc": "c7", "type": "p"}, {"loc": "d7", "type": "p"}, {"loc": "e7", "type": "p"}, {"loc": "f7", "type": "p"}, {"loc": "g7", "type": "p"}, {"loc": "h7", "type": "p"}, {"loc": "a8", "type": "r"}, {"loc": "b8", "type": "n"}, {"loc": "c8", "type": "b"}, {"loc": "d8", "type": "q"}, {"loc": "e8", "type": "k"}, {"loc": "f8", "type": "b"}, {"loc": "g8", "type": "n"}, {"loc": "h8", "type": "r"}], "move": "d6", "playerState": "b"},"id" : 1,"jsonrpc" : "2.0"}
+
+SFCS API Response:
+{'result': {'gameState': '', 'boardState': [{'type': 'R', 'loc': 'a1'}, {'type': 'N', 'loc': 'b1'}, {'type': 'B', 'loc': 'c1'}, {'type': 'Q', 'loc': 'd1'}, {'type': 'K', 'loc': 'e1'}, {'type': 'B', 'loc': 'f1'}, {'type': 'N', 'loc': 'g1'}, {'type': 'R', 'loc': 'h1'}, {'type': 'P', 'loc': 'a2'}, {'type': 'P', 'loc': 'b2'}, {'type': 'P', 'loc': 'c2'}, {'type': 'P', 'loc': 'd2'}, {'type': 'P', 'loc': 'e2'}, {'type': 'P', 'loc': 'f2'}, {'type': 'P', 'loc': 'g2'}, {'type': 'P', 'loc': 'h2'}, {'type': 'p', 'loc': 'd6'}, {'type': 'p', 'loc': 'a7'}, {'type': 'p', 'loc': 'b7'}, {'type': 'p', 'loc': 'c7'}, {'type': 'p', 'loc': 'e7'}, {'type': 'p', 'loc': 'f7'}, {'type': 'p', 'loc': 'g7'}, {'type': 'p', 'loc': 'h7'}, {'type': 'r', 'loc': 'a8'}, {'type': 'n', 'loc': 'b8'}, {'type': 'b', 'loc': 'c8'}, {'type': 'q', 'loc': 'd8'}, {'type': 'k', 'loc': 'e8'}, {'type': 'b', 'loc': 'f8'}, {'type': 'n', 'loc': 'g8'}, {'type': 'r', 'loc': 'h8'}], 'playerState': 'w'}, 'id': 1}
+Checking our SFCS API response against the expected response params...
+Found unexpected results in the API response!
+EXPECTED Error TEST b_pawn_starts_first_move_error FAILED.
+
+Returned Failure Information:
+expectedErrorCaseFAIL
+Expecting: -32020
+Received: {'result': {'gameState': '', 'boardState': [{'type': 'R', 'loc': 'a1'}, {'type': 'N', 'loc': 'b1'}, {'type': 'B', 'loc': 'c1'}, {'type': 'Q', 'loc': 'd1'}, {'type': 'K', 'loc': 'e1'}, {'type': 'B', 'loc': 'f1'}, {'type': 'N', 'loc': 'g1'}, {'type': 'R', 'loc': 'h1'}, {'type': 'P', 'loc': 'a2'}, {'type': 'P', 'loc': 'b2'}, {'type': 'P', 'loc': 'c2'}, {'type': 'P', 'loc': 'd2'}, {'type': 'P', 'loc': 'e2'}, {'type': 'P', 'loc': 'f2'}, {'type': 'P', 'loc': 'g2'}, {'type': 'P', 'loc': 'h2'}, {'type': 'p', 'loc': 'd6'}, {'type': 'p', 'loc': 'a7'}, {'type': 'p', 'loc': 'b7'}, {'type': 'p', 'loc': 'c7'}, {'type': 'p', 'loc': 'e7'}, {'type': 'p', 'loc': 'f7'}, {'type': 'p', 'loc': 'g7'}, {'type': 'p', 'loc': 'h7'}, {'type': 'r', 'loc': 'a8'}, {'type': 'n', 'loc': 'b8'}, {'type': 'b', 'loc': 'c8'}, {'type': 'q', 'loc': 'd8'}, {'type': 'k', 'loc': 'e8'}, {'type': 'b', 'loc': 'f8'}, {'type': 'n', 'loc': 'g8'}, {'type': 'r', 'loc': 'h8'}], 'playerState': 'w'}, 'id': 1}
+=============================================================================
+
+
+Moving on to next test...
+
+======================================================================
+****** Starting test case b_queen_illegal_move_thru_pieces_S5 ******
+
+Test: b_queen_illegal_move_thru_pieces_S5 specified in test definition file b_queen_illegal_move_thru_pieces_S5.expfail
+
+Test Description:  Black Queen illegal move through pawns.  Expect move error.
+
+***Beginning test run of b_queen_illegal_move_thru_pieces_S5***
+
+We have an API Request for b_queen_illegal_move_thru_pieces_S5. Submit it to the SFCS API and save to log file.
+
+API Request for testcase b_queen_illegal_move_thru_pieces_S5:
+ {"method" : "MakeMove","params": {"boardState": [{"loc": "a1", "type": "R"}, {"loc": "b1", "type": "N"}, {"loc": "c1", "type": "B"}, {"loc": "d1", "type": "Q"}, {"loc": "e1", "type": "K"}, {"loc": "f1", "type": "B"}, {"loc": "g1", "type": "N"}, {"loc": "h1", "type": "R"}, {"loc": "a2", "type": "P"}, {"loc": "b4", "type": "P"}, {"loc": "c4", "type": "P"}, {"loc": "d4", "type": "P"}, {"loc": "e4", "type": "P"}, {"loc": "f4", "type": "P"}, {"loc": "g4", "type": "P"}, {"loc": "h2", "type": "P"}, {"loc": "a7", "type": "p"}, {"loc": "b5", "type": "p"}, {"loc": "c5", "type": "p"}, {"loc": "d5", "type": "p"}, {"loc": "e5", "type": "p"}, {"loc": "f5", "type": "p"}, {"loc": "g5", "type": "p"}, {"loc": "h7", "type": "p"}, {"loc": "a8", "type": "r"}, {"loc": "b8", "type": "n"}, {"loc": "c8", "type": "b"}, {"loc": "d8", "type": "q"}, {"loc": "e8", "type": "k"}, {"loc": "f8", "type": "b"}, {"loc": "g8", "type": "n"}, {"loc": "h8", "type": "r"}], "move": "Qdd3", "playerState": "b"},"id" : 1,"jsonrpc" : "2.0"}
+
+Received an 'error' message in the SFCS API response:
+
+{'error': {'data': 'Qdd3', 'message': 'Move cannot be made.', 'code': -32020}, 'id': 1}
+Checking our SFCS API response against the expected response params...
+Expected Error code returned.
+
+EXPECTED Error TEST b_queen_illegal_move_thru_pieces_S5 PASSED.
+
+=============================================================================
+
+
+======================================================================
+****** Starting test case b_rook_invalid_move_in_white_turn ******
+
+Test: b_rook_invalid_move_in_white_turn specified in test definition file b_rook_invalid_move_in_white_turn.expfail
+
+Test Description:  Moving Black Rook when it's White's turn
+
+***Beginning test run of b_rook_invalid_move_in_white_turn***
+
+We have an API Request for b_rook_invalid_move_in_white_turn. Submit it to the SFCS API and save to log file.
+
+API Request for testcase b_rook_invalid_move_in_white_turn:
+ {"method" : "MakeMove","params": {"boardState": [{"loc": "c4", "type": "R"}, {"loc": "e1", "type": "K"}, {"loc": "f3", "type": "R"}, {"loc": "c5", "type": "r"}, {"loc": "e8", "type": "k"}, {"loc": "f6", "type": "r"}], "move": "Rfxf3", "playerState": "w"},"id" : 1,"jsonrpc" : "2.0"}
+
+Received an 'error' message in the SFCS API response:
+
+{'error': {'data': 'Rfxf3', 'message': 'Move cannot be made.', 'code': -32020}, 'id': 1}
+Checking our SFCS API response against the expected response params...
+Expected Error code returned.
+
+EXPECTED Error TEST b_rook_invalid_move_in_white_turn PASSED.
+
+=============================================================================
+
+
+======================================================================
+****** Starting test case nine_b_pawns_board_error ******
+
+Test: nine_b_pawns_board_error specified in test definition file nine_b_pawns_board_error.expfail
+
+Test Description:  Too many balck pawns (9) on starting board.  Expect board error.
+
+***Beginning test run of nine_b_pawns_board_error***
+
+We have an API Request for nine_b_pawns_board_error. Submit it to the SFCS API and save to log file.
+
+API Request for testcase nine_b_pawns_board_error:
+ {"method" : "MakeMove","params": {"boardState": [{"type": "R", "loc": "a1"}, {"type": "N", "loc": "b1"}, {"type": "B", "loc": "c1"}, {"type": "Q", "loc": "d1"}, {"type": "K", "loc": "e1"}, {"type": "B", "loc": "f1"}, {"type": "N", "loc": "g1"}, {"type": "R", "loc": "h1"}, {"type": "P", "loc": "a2"}, {"type": "P", "loc": "b2"}, {"type": "P", "loc": "c2"}, {"type": "P", "loc": "d2"}, {"type": "P", "loc": "e2"}, {"type": "P", "loc": "f2"}, {"type": "P", "loc": "g2"}, {"type": "P", "loc": "h2"}, {"type": "p", "loc": "a7"}, {"type": "p", "loc": "a6"}, {"type": "p", "loc": "b7"}, {"type": "p", "loc": "c7"}, {"type": "p", "loc": "d7"}, {"type": "p", "loc": "e7"}, {"type": "p", "loc": "f7"}, {"type": "p", "loc": "g7"}, {"type": "p", "loc": "h7"}, {"type": "r", "loc": "a8"}, {"type": "n", "loc": "b8"}, {"type": "b", "loc": "c8"}, {"type": "q", "loc": "d8"}, {"type": "k", "loc": "e8"}, {"type": "b", "loc": "f8"}, {"type": "n", "loc": "g8"}, {"type": "r", "loc": "h8"}], "move": "e3", "playerState": "w"},"id" : 1,"jsonrpc" : "2.0"}
+
+Received an 'error' message in the SFCS API response:
+
+{'error': {'message': 'Invalid board.', 'code': -32000}, 'id': 1}
+Checking our SFCS API response against the expected response params...
+Expected Error code returned.
+
+EXPECTED Error TEST nine_b_pawns_board_error PASSED.
+
+=============================================================================
+
+
+======================================================================
+****** Starting test case ninth_b_pawn_in_w_start_row_board_error ******
+
+Test: ninth_b_pawn_in_w_start_row_board_error specified in test definition file ninth_b_pawn_in_w_start_row_board_error.expfail
+
+Test Description:  Starting Board, extra black pawn lines up w/ white pawns.  Expect board error.
+
+***Beginning test run of ninth_b_pawn_in_w_start_row_board_error***
+
+We have an API Request for ninth_b_pawn_in_w_start_row_board_error. Submit it to the SFCS API and save to log file.
+
+API Request for testcase ninth_b_pawn_in_w_start_row_board_error:
+ {"method" : "MakeMove","params": {"boardState": [{"loc": "a1", "type": "R"}, {"loc": "b1", "type": "N"}, {"loc": "c1", "type": "B"}, {"loc": "d1", "type": "Q"}, {"loc": "e1", "type": "K"}, {"loc": "f1", "type": "B"}, {"loc": "g1", "type": "N"}, {"loc": "h1", "type": "R"}, {"loc": "b2", "type": "P"}, {"loc": "c2", "type": "P"}, {"loc": "d2", "type": "P"}, {"loc": "e2", "type": "P"}, {"loc": "f2", "type": "P"}, {"loc": "g2", "type": "P"}, {"loc": "h2", "type": "P"}, {"loc": "a7", "type": "p"}, {"loc": "a2", "type": "p"}, {"loc": "b7", "type": "p"}, {"loc": "c7", "type": "p"}, {"loc": "d7", "type": "p"}, {"loc": "e7", "type": "p"}, {"loc": "f7", "type": "p"}, {"loc": "g7", "type": "p"}, {"loc": "h7", "type": "p"}, {"loc": "a8", "type": "r"}, {"loc": "b8", "type": "n"}, {"loc": "c8", "type": "b"}, {"loc": "d8", "type": "q"}, {"loc": "e8", "type": "k"}, {"loc": "f8", "type": "b"}, {"loc": "g8", "type": "n"}, {"loc": "h8", "type": "r"}], "move": "c3", "playerState": "w"},"id" : 1,"jsonrpc" : "2.0"}
+
+Received an 'error' message in the SFCS API response:
+
+{'error': {'message': 'Invalid board.', 'code': -32000}, 'id': 1}
+Checking our SFCS API response against the expected response params...
+Expected Error code returned.
+
+EXPECTED Error TEST ninth_b_pawn_in_w_start_row_board_error PASSED.
+
+=============================================================================
+
+
+======================================================================
+****** Starting test case one_piece_on_board_error ******
+
+Test: one_piece_on_board_error specified in test definition file one_piece_on_board_error.expfail
+
+Test Description:  Board with only one piece (white King). Expect board error
+
+***Beginning test run of one_piece_on_board_error***
+
+We have an API Request for one_piece_on_board_error. Submit it to the SFCS API and save to log file.
+
+API Request for testcase one_piece_on_board_error:
+ {"method" : "MakeMove","params": {"boardState": [{"type": "K", "loc": "e1"}], "move": "Ked1", "playerState": "w"},"id" : 1,"jsonrpc" : "2.0"}
+
+Received an 'error' message in the SFCS API response:
+
+{'error': {'message': 'Invalid board.', 'code': -32000}, 'id': 1}
+Checking our SFCS API response against the expected response params...
+Expected Error code returned.
+
+EXPECTED Error TEST one_piece_on_board_error PASSED.
+
+=============================================================================
+
+
+======================================================================
+****** Starting test case start_board_missing_king_board_error ******
+
+Test: start_board_missing_king_board_error specified in test definition file start_board_missing_king_board_error.expfail
+
+Test Description:  Starting board missing white King.  Expect board error.
+
+***Beginning test run of start_board_missing_king_board_error***
+
+We have an API Request for start_board_missing_king_board_error. Submit it to the SFCS API and save to log file.
+
+API Request for testcase start_board_missing_king_board_error:
+ {"method" : "MakeMove","params": {"boardState": [{"loc": "a1", "type": "R"}, {"loc": "b1", "type": "N"}, {"loc": "c1", "type": "B"}, {"loc": "d1", "type": "Q"}, {"loc": "f1", "type": "B"}, {"loc": "g1", "type": "N"}, {"loc": "h1", "type": "R"}, {"loc": "a2", "type": "P"}, {"loc": "b2", "type": "P"}, {"loc": "c2", "type": "P"}, {"loc": "d2", "type": "P"}, {"loc": "e2", "type": "P"}, {"loc": "f2", "type": "P"}, {"loc": "g2", "type": "P"}, {"loc": "h2", "type": "P"}, {"loc": "a7", "type": "p"}, {"loc": "b7", "type": "p"}, {"loc": "c7", "type": "p"}, {"loc": "d7", "type": "p"}, {"loc": "e7", "type": "p"}, {"loc": "f7", "type": "p"}, {"loc": "g7", "type": "p"}, {"loc": "h7", "type": "p"}, {"loc": "a8", "type": "r"}, {"loc": "b8", "type": "n"}, {"loc": "c8", "type": "b"}, {"loc": "d8", "type": "q"}, {"loc": "e8", "type": "k"}, {"loc": "f8", "type": "b"}, {"loc": "g8", "type": "n"}, {"loc": "h8", "type": "r"}], "move": "a6", "playerState": "b"},"id" : 1,"jsonrpc" : "2.0"}
+
+Received an 'error' message in the SFCS API response:
+
+{'error': {'message': 'Invalid board.', 'code': -32000}, 'id': 1}
+Checking our SFCS API response against the expected response params...
+Expected Error code returned.
+
+EXPECTED Error TEST start_board_missing_king_board_error PASSED.
+
+=============================================================================
+
+
+======================================================================
+****** Starting test case two_b_kings_33_total_pieces_board_error ******
+
+Test: two_b_kings_33_total_pieces_board_error specified in test definition file two_b_kings_33_total_pieces_board_error.expfail
+
+Test Description:  Starting Board w/ 2 Black Kings, more than 32 total pieces
+
+***Beginning test run of two_b_kings_33_total_pieces_board_error***
+
+We have an API Request for two_b_kings_33_total_pieces_board_error. Submit it to the SFCS API and save to log file.
+
+API Request for testcase two_b_kings_33_total_pieces_board_error:
+ {"method" : "MakeMove","params": {"boardState": [{"loc": "a1", "type": "R"}, {"loc": "b1", "type": "N"}, {"loc": "c1", "type": "B"}, {"loc": "d1", "type": "Q"}, {"loc": "e1", "type": "K"}, {"loc": "f1", "type": "B"}, {"loc": "g1", "type": "N"}, {"loc": "h1", "type": "R"}, {"loc": "a2", "type": "P"}, {"loc": "b2", "type": "P"}, {"loc": "c2", "type": "P"}, {"loc": "d2", "type": "P"}, {"loc": "e2", "type": "P"}, {"loc": "f2", "type": "P"}, {"loc": "g2", "type": "P"}, {"loc": "h2", "type": "P"}, {"loc": "a7", "type": "p"}, {"loc": "b7", "type": "p"}, {"loc": "c7", "type": "p"}, {"loc": "d7", "type": "p"}, {"loc": "e7", "type": "p"}, {"loc": "f7", "type": "p"}, {"loc": "g7", "type": "p"}, {"loc": "h7", "type": "p"}, {"loc": "a8", "type": "r"}, {"loc": "b8", "type": "n"}, {"loc": "c8", "type": "b"}, {"loc": "d8", "type": "q"}, {"loc": "e8", "type": "k"}, {"loc": "f8", "type": "b"}, {"loc": "g8", "type": "n"}, {"loc": "h8", "type": "r"}, {"loc": "e6", "type": "k"}], "move": "Kee5", "playerState": "b"},"id" : 1,"jsonrpc" : "2.0"}
+
+Received an 'error' message in the SFCS API response:
+
+{'error': {'message': 'Invalid board.', 'code': -32000}, 'id': 1}
+Checking our SFCS API response against the expected response params...
+Expected Error code returned.
+
+EXPECTED Error TEST two_b_kings_33_total_pieces_board_error PASSED.
+
+=============================================================================
+
+
+======================================================================
+****** Starting test case two_pieces_on_square_board_error ******
+
+Test: two_pieces_on_square_board_error specified in test definition file two_pieces_on_square_board_error.expfail
+
+Test Description:  Two pieces on one square.  Expect board error.
+
+***Beginning test run of two_pieces_on_square_board_error***
+
+We have an API Request for two_pieces_on_square_board_error. Submit it to the SFCS API and save to log file.
+
+API Request for testcase two_pieces_on_square_board_error:
+ {"method" : "MakeMove","params": {"boardState": [{"loc": "e1", "type": "K"}, {"loc": "e1", "type": "k"}], "move": "Kee2", "playerState": "b"},"id" : 1,"jsonrpc" : "2.0"}
+
+Received an 'error' message in the SFCS API response:
+
+{'error': {'message': 'Invalid board.', 'code': -32000}, 'id': 1}
+Checking our SFCS API response against the expected response params...
+Expected Error code returned.
+
+EXPECTED Error TEST two_pieces_on_square_board_error PASSED.
+
+=============================================================================
+
+
+======================================================================
+****** Starting test case w_move_while_b_turn_player_error ******
+
+Test: w_move_while_b_turn_player_error specified in test definition file w_move_while_b_turn_player_error.expfail
+
+Test Description:  White Move while Black Turn.  Expect Player Error.
+
+***Beginning test run of w_move_while_b_turn_player_error***
+
+We have an API Request for w_move_while_b_turn_player_error. Submit it to the SFCS API and save to log file.
+
+API Request for testcase w_move_while_b_turn_player_error:
+ {"method" : "MakeMove","params": {"boardState": [{"type": "R", "loc": "a1"}, {"type": "N", "loc": "b1"}, {"type": "B", "loc": "c1"}, {"type": "Q", "loc": "d1"}, {"type": "K", "loc": "e1"}, {"type": "B", "loc": "f1"}, {"type": "N", "loc": "g1"}, {"type": "R", "loc": "h1"}, {"type": "P", "loc": "a2"}, {"type": "P", "loc": "b4"}, {"type": "P", "loc": "c2"}, {"type": "P", "loc": "d4"}, {"type": "P", "loc": "e4"}, {"type": "P", "loc": "f2"}, {"type": "P", "loc": "g4"}, {"type": "P", "loc": "h2"}, {"type": "p", "loc": "a7"}, {"type": "p", "loc": "b5"}, {"type": "p", "loc": "c7"}, {"type": "p", "loc": "d5"}, {"type": "p", "loc": "e5"}, {"type": "p", "loc": "f7"}, {"type": "p", "loc": "g5"}, {"type": "p", "loc": "h7"}, {"type": "r", "loc": "a8"}, {"type": "n", "loc": "b8"}, {"type": "b", "loc": "c8"}, {"type": "q", "loc": "d8"}, {"type": "k", "loc": "e8"}, {"type": "b", "loc": "f8"}, {"type": "n", "loc": "g8"}, {"type": "r", "loc": "h8"}], "move": "Ked2", "playerState": "b"},"id" : 1,"jsonrpc" : "2.0"}
+
+Received an 'error' message in the SFCS API response:
+
+{'error': {'data': 'Ked2', 'message': 'Move cannot be made.', 'code': -32020}, 'id': 1}
+Checking our SFCS API response against the expected response params...
+Found unexpected results in the API response!
+EXPECTED Error TEST w_move_while_b_turn_player_error FAILED.
+
+Returned Failure Information:
+expectedErrorCaseFAIL
+Expecting: -32010
+Received: -32020
+=============================================================================
+
+
+Moving on to next test...
+
+======================================================================
+****** Starting test case w_queen_illegal_knight_move_error ******
+
+Test: w_queen_illegal_knight_move_error specified in test definition file w_queen_illegal_knight_move_error.expfail
+
+Test Description:  White Queen makes illegal Knight move.  Expect Move error
+
+***Beginning test run of w_queen_illegal_knight_move_error***
+
+We have an API Request for w_queen_illegal_knight_move_error. Submit it to the SFCS API and save to log file.
+
+API Request for testcase w_queen_illegal_knight_move_error:
+ {"method" : "MakeMove","params": {"boardState": [{"type": "R", "loc": "a1"}, {"type": "N", "loc": "b1"}, {"type": "B", "loc": "c1"}, {"type": "Q", "loc": "d1"}, {"type": "K", "loc": "e1"}, {"type": "B", "loc": "f1"}, {"type": "N", "loc": "g1"}, {"type": "R", "loc": "h1"}, {"type": "P", "loc": "a2"}, {"type": "P", "loc": "b4"}, {"type": "P", "loc": "c4"}, {"type": "P", "loc": "d4"}, {"type": "P", "loc": "e4"}, {"type": "P", "loc": "f4"}, {"type": "P", "loc": "g4"}, {"type": "P", "loc": "h2"}, {"type": "p", "loc": "a7"}, {"type": "p", "loc": "b5"}, {"type": "p", "loc": "c5"}, {"type": "p", "loc": "d5"}, {"type": "p", "loc": "e5"}, {"type": "p", "loc": "f5"}, {"type": "p", "loc": "g5"}, {"type": "p", "loc": "h7"}, {"type": "r", "loc": "a8"}, {"type": "n", "loc": "b8"}, {"type": "b", "loc": "c8"}, {"type": "q", "loc": "d8"}, {"type": "k", "loc": "e8"}, {"type": "b", "loc": "f8"}, {"type": "n", "loc": "g8"}, {"type": "r", "loc": "h8"}], "move": "Qde3", "playerState": "w"},"id" : 1,"jsonrpc" : "2.0"}
+
+Received an 'error' message in the SFCS API response:
+
+{'error': {'data': 'Qde3', 'message': 'Move cannot be made.', 'code': -32020}, 'id': 1}
+Checking our SFCS API response against the expected response params...
+Expected Error code returned.
+
+EXPECTED Error TEST w_queen_illegal_knight_move_error PASSED.
+
+=============================================================================
+
+
+Thank You for using our amazing API testing facility!!!
+
+Exiting Run_SFCS_Tests!

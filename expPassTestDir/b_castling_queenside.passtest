@@ -1,0 +1,7 @@
+testName : b_castling_queenside
+Description : Black Castling Queenside move test
+request : {"method" : "MakeMove","params": {"boardState": [{"type": "R", "loc": "a1"}, {"type": "K", "loc": "e1"}, {"type": "R", "loc": "h1"}, {"type": "P", "loc": "a2"}, {"type": "P", "loc": "b2"}, {"type": "P", "loc": "c2"}, {"type": "P", "loc": "f2"}, {"type": "P", "loc": "g2"}, {"type": "P", "loc": "h2"}, {"type": "p", "loc": "a7"}, {"type": "p", "loc": "b7"}, {"type": "p", "loc": "c7"}, {"type": "p", "loc": "f7"}, {"type": "p", "loc": "g7"}, {"type": "p", "loc": "h7"}, {"type": "r", "loc": "a8"}, {"type": "k", "loc": "e8"}, {"type": "r", "loc": "h8"}], "move": "0-0-0", "playerState": "b"},"id" : 1,"jsonrpc" : "2.0"}
+"gameState": ""
+"playerState": "w"
+movedPieces : [{'type': 'r', 'loc': 'a8'}, {'type': 'k', 'loc': 'e8'}]
+expectedResponsePieces : [{'type': 'r', 'loc': 'd8'}, {'type': 'k', 'loc': 'c8'}]

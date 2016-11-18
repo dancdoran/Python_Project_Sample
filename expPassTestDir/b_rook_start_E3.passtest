@@ -1,0 +1,7 @@
+b_rook_start_E3
+Description : Black Rook Start Horizontal move
+request : {"method" : "MakeMove","params": {"boardState": [{"loc": "a1", "type": "R"}, {"loc": "e1", "type": "K"}, {"loc": "h1", "type": "R"}, {"loc": "a8", "type": "r"}, {"loc": "e8", "type": "k"}, {"loc": "h8", "type": "r"}], "move": "Rad8", "playerState": "b"},"id" : 1,"jsonrpc" : "2.0"}
+"gameState": ""
+"playerState": "w"
+movedPieces : [{'loc': 'a8', 'type': 'r'}]
+expectedResponsePieces : [{'loc': 'd8', 'type': 'r'}]

@@ -1,0 +1,4 @@
+testName : one_piece_on_board_error
+Description : Board with only one piece (white King). Expect board error
+request : {"method" : "MakeMove","params": {"boardState": [{"type": "K", "loc": "e1"}], "move": "Ked1", "playerState": "w"},"id" : 1,"jsonrpc" : "2.0"}
+errorCode : {'code': -32000}

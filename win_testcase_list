@@ -1,0 +1,2 @@
+expFailTestDir\b_rook_invalid_move_in_white_turn.expfail
+expPassTestDir\w_pawn_start_N2.passtest

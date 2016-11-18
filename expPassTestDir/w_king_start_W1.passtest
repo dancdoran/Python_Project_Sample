@@ -1,0 +1,7 @@
+w_king_start_W1
+Description : White King Start Move West
+request : {"method" : "MakeMove","params": {"boardState": [{"type": "Q", "loc": "c1"}, {"type": "K", "loc": "e1"}, {"type": "q", "loc": "c8"}, {"type": "k", "loc": "e8"}], "move": "Kef1", "playerState": "w"},"id" : 1,"jsonrpc" : "2.0"}
+"gameState": ""
+"playerState": "b"
+movedPieces : [{'type': 'K', 'loc': 'e1'}]
+expectedResponsePieces : [{'type': 'K', 'loc': 'f1'}]

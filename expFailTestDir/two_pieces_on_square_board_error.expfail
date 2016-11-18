@@ -1,0 +1,4 @@
+testName : two_pieces_on_square_board_error
+Description : Two pieces on one square.  Expect board error.
+request : {"method" : "MakeMove","params": {"boardState": [{"loc": "e1", "type": "K"}, {"loc": "e1", "type": "k"}], "move": "Kee2", "playerState": "b"},"id" : 1,"jsonrpc" : "2.0"}
+errorCode : {'code': -32000}

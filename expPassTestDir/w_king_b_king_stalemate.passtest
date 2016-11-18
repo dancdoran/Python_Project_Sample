@@ -1,0 +1,7 @@
+w_king_b_king_stalemate
+Description : Only two pieces on board, B & w Kings. Expected Stalemate.
+request : {"method" : "MakeMove","params": {"boardState": [{"type": "K", "loc": "e1"}, {"type": "k", "loc": "e8"}], "move": "Kee2", "playerState": "w"},"id" : 1,"jsonrpc" : "2.0"}
+"gameState": "stalemate"
+"playerState": "b"
+movedPieces : [{'type': 'K', 'loc': 'e1'}]
+expectedResponsePieces : [{'type': 'K', 'loc': 'e2'}]

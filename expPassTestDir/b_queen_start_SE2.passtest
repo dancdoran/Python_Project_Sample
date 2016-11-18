@@ -1,0 +1,7 @@
+b_queen_start_SE2
+Description : Black Queen start move, SE
+request : {"method" : "MakeMove","params": {"boardState": [{"type": "Q", "loc": "d1"}, {"type": "K", "loc": "g2"}, {"type": "q", "loc": "d8"}, {"type": "k", "loc": "b7"}], "move": "Qdb6", "playerState": "b"},"id" : 1,"jsonrpc" : "2.0"}
+"gameState": ""
+"playerState": "w"
+movedPieces : [{'type': 'q', 'loc': 'd8'}]
+expectedResponsePieces : [{'type': 'q', 'loc': 'b6'}]

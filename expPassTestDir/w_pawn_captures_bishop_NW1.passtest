@@ -1,0 +1,7 @@
+w_pawn_captures_bishop_NW1
+Description : White Pawn captures bishop
+request : {"method" : "MakeMove","params": {"boardState": [{"loc": "a1", "type": "R"}, {"loc": "d1", "type": "Q"}, {"loc": "e1", "type": "K"}, {"loc": "e8", "type": "k"}, {"loc": "h8", "type": "r"}, {"loc": "b3", "type": "P"}, {"loc": "c3", "type": "P"}, {"loc": "b4", "type": "b"}, {"loc": "f6", "type": "p"}, {"loc": "g6", "type": "p"}, {"loc": "g5", "type": "B"}], "move": "cxb4", "playerState": "w"},"id" : 1,"jsonrpc" : "2.0"}
+"gameState": ""
+"playerState": "b"
+movedPieces : [{'loc': 'c3', 'type': 'P'}, {'loc': 'b4', 'type': 'b'}]
+expectedResponsePieces : [{'loc': 'b4', 'type': 'P'}]

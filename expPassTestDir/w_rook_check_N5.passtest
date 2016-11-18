@@ -1,0 +1,7 @@
+w_rook_check_N5
+Description : White Rook moves for Check
+request : {"method" : "MakeMove","params": {"boardState": [{"loc": "c7", "type": "R"}, {"loc": "e1", "type": "K"}, {"loc": "h3", "type": "R"}, {"loc": "c5", "type": "r"}, {"loc": "e8", "type": "k"}, {"loc": "f6", "type": "r"}], "move": "Rhh8#", "playerState": "w"},"id" : 1,"jsonrpc" : "2.0"}
+"gameState": "check"
+"playerState": "b"
+movedPieces : [{'type': 'R', 'loc': 'h3'}]
+expectedResponsePieces : [{'type': 'R', 'loc': 'h8'}]

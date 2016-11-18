@@ -1,0 +1,7 @@
+testName : w_rook_start_move
+Description : White Rook Moving from start position
+request : {"method" : "MakeMove","params": {"boardState": [{"type": "R", "loc": "a1"}, {"type": "K", "loc": "e1"}, {"type": "R", "loc": "h1"}, {"type": "r", "loc": "a8"}, {"type": "k", "loc": "e8"}, {"type": "r", "loc": "h8"}], "move": "Rad1", "playerState": "w"},"id" : 1,"jsonrpc" : "2.0"}
+"gameState": ""
+"playerState": "b"
+movedPieces : [{'type': 'R', 'loc': 'a1'}]
+expectedResponsePieces : [{'type': 'R', 'loc': 'd1'}]

@@ -1,0 +1,7 @@
+b_knight_jump_pawn_SW
+Description : Black Knight Start Move left, jumping pawn
+request : {"method" : "MakeMove","params": {"boardState": [{"type": "R", "loc": "a1"}, {"type": "N", "loc": "b1"}, {"type": "B", "loc": "c1"}, {"type": "Q", "loc": "d1"}, {"type": "K", "loc": "e1"}, {"type": "B", "loc": "f1"}, {"type": "N", "loc": "g1"}, {"type": "R", "loc": "h1"}, {"type": "P", "loc": "a2"}, {"type": "P", "loc": "b2"}, {"type": "P", "loc": "c2"}, {"type": "P", "loc": "d3"}, {"type": "P", "loc": "e2"}, {"type": "P", "loc": "f2"}, {"type": "P", "loc": "g2"}, {"type": "P", "loc": "h2"}, {"type": "p", "loc": "a7"}, {"type": "p", "loc": "b7"}, {"type": "p", "loc": "c7"}, {"type": "p", "loc": "d7"}, {"type": "p", "loc": "e7"}, {"type": "p", "loc": "f7"}, {"type": "p", "loc": "g7"}, {"type": "p", "loc": "h7"}, {"type": "r", "loc": "a8"}, {"type": "n", "loc": "b8"}, {"type": "b", "loc": "c8"}, {"type": "q", "loc": "d8"}, {"type": "k", "loc": "e8"}, {"type": "b", "loc": "f8"}, {"type": "n", "loc": "g8"}, {"type": "r", "loc": "h8"}], "move": "Ngh6", "playerState": "b"},"id" : 1,"jsonrpc" : "2.0"}
+"gameState": ""
+"playerState": "w"
+movedPieces : [{'type': 'n', 'loc': 'g8'}]
+expectedResponsePieces : [{'type': 'n', 'loc': 'h6'}]

@@ -1,0 +1,1090 @@
+
+ 
+      **** Welcome to the SolidFire Chess Service API Testing System. ****
+
+           Test Results will be written to 'Test_Results_<date>_<time>.report'.
+           All API requests and results will be logged to 'Test_API_<date>_<time>.log.'
+
+
+      **** ALL 42 TESTS COMPLETED! TEST SUMMARY ****
+           34 of 42 Tests PASSED - 81.0 %
+           8 of 42 Tests FAILED - 19.0 %
+           0 of 42 Tests UNEXPECTEDLY EXITED - 0.0 %
+
+Example SolidFire Chess Service API testing scripts & reports.
+Copyright 2016 - Dan Doran, Boulder, CO
+
+This is a test facility that exercises the SFCS API 'MakeMove' method with a variety
+of tests definition files expected to either PASS (correct params in result) or produce a
+specified Error.
+
+Search for the string 'FAILED' (all upper case) to go directly to any failing test.
+
+Date of Test: 11_17_2016
+Time of Test: 09_13_21
+
+Found 42 test files to run:
+/mnt/c/Users/doran/Desktop/SFCS_Test/expPassTestDir/b_castling_kingside.passtest
+/mnt/c/Users/doran/Desktop/SFCS_Test/expPassTestDir/b_castling_queenside.passtest
+/mnt/c/Users/doran/Desktop/SFCS_Test/expPassTestDir/b_kings_bishop_start_SW2.passtest
+/mnt/c/Users/doran/Desktop/SFCS_Test/expPassTestDir/b_king_start_w1.passtest
+/mnt/c/Users/doran/Desktop/SFCS_Test/expPassTestDir/b_knight_jump_pawn_SW.passtest
+/mnt/c/Users/doran/Desktop/SFCS_Test/expPassTestDir/b_knight_jump_right_SE.passtest
+/mnt/c/Users/doran/Desktop/SFCS_Test/expPassTestDir/b_pawn_start_S1.passtest
+/mnt/c/Users/doran/Desktop/SFCS_Test/expPassTestDir/b_pawn_start_S2.passtest
+/mnt/c/Users/doran/Desktop/SFCS_Test/expPassTestDir/b_queens_bishop_start_SE3.passtest
+/mnt/c/Users/doran/Desktop/SFCS_Test/expPassTestDir/b_queen_start_SE2.passtest
+/mnt/c/Users/doran/Desktop/SFCS_Test/expPassTestDir/b_rook_start_E3.passtest
+/mnt/c/Users/doran/Desktop/SFCS_Test/expPassTestDir/b_rook_start_S5.passtest
+/mnt/c/Users/doran/Desktop/SFCS_Test/expPassTestDir/w_castling_kingside.passtest
+/mnt/c/Users/doran/Desktop/SFCS_Test/expPassTestDir/w_castling_queenside.passtest
+/mnt/c/Users/doran/Desktop/SFCS_Test/expPassTestDir/w_kings_bishop_start_NE3.passtest
+/mnt/c/Users/doran/Desktop/SFCS_Test/expPassTestDir/w_kings_bishop_start_NW2.passtest
+/mnt/c/Users/doran/Desktop/SFCS_Test/expPassTestDir/w_king_b_king_stalemate.passtest
+/mnt/c/Users/doran/Desktop/SFCS_Test/expPassTestDir/w_king_start_W1.passtest
+/mnt/c/Users/doran/Desktop/SFCS_Test/expPassTestDir/w_knight_start_jump_pawn_NW.passtest
+/mnt/c/Users/doran/Desktop/SFCS_Test/expPassTestDir/w_knight_start_jump_SE.passtest
+/mnt/c/Users/doran/Desktop/SFCS_Test/expPassTestDir/w_pawn_captures_bishop_NW1.passtest
+/mnt/c/Users/doran/Desktop/SFCS_Test/expPassTestDir/w_pawn_enpassant_capture_NW1.passtest
+/mnt/c/Users/doran/Desktop/SFCS_Test/expPassTestDir/w_pawn_promotion_to_queen_check_N1.passtest
+/mnt/c/Users/doran/Desktop/SFCS_Test/expPassTestDir/w_pawn_start_N1.passtest
+/mnt/c/Users/doran/Desktop/SFCS_Test/expPassTestDir/w_pawn_start_N2.passtest
+/mnt/c/Users/doran/Desktop/SFCS_Test/expPassTestDir/w_queens_bishop_start_NE2.passtest
+/mnt/c/Users/doran/Desktop/SFCS_Test/expPassTestDir/w_queens_bishop_start_NW.passtest
+/mnt/c/Users/doran/Desktop/SFCS_Test/expPassTestDir/w_queen_start_NE3.passtest
+/mnt/c/Users/doran/Desktop/SFCS_Test/expPassTestDir/w_rook_checkmate_N5.passtest
+/mnt/c/Users/doran/Desktop/SFCS_Test/expPassTestDir/w_rook_check_N5.passtest
+/mnt/c/Users/doran/Desktop/SFCS_Test/expPassTestDir/w_rook_start_move.passtest
+/mnt/c/Users/doran/Desktop/SFCS_Test/expFailTestDir/b_pawn_starts_first_move_error.expfail
+/mnt/c/Users/doran/Desktop/SFCS_Test/expFailTestDir/b_queen_illegal_move_thru_pieces_S5.expfail
+/mnt/c/Users/doran/Desktop/SFCS_Test/expFailTestDir/b_rook_invalid_move_in_white_turn.expfail
+/mnt/c/Users/doran/Desktop/SFCS_Test/expFailTestDir/nine_b_pawns_board_error.expfail
+/mnt/c/Users/doran/Desktop/SFCS_Test/expFailTestDir/ninth_b_pawn_in_w_start_row_board_error.expfail
+/mnt/c/Users/doran/Desktop/SFCS_Test/expFailTestDir/one_piece_on_board_error.expfail
+/mnt/c/Users/doran/Desktop/SFCS_Test/expFailTestDir/start_board_missing_king_board_error.expfail
+/mnt/c/Users/doran/Desktop/SFCS_Test/expFailTestDir/two_b_kings_33_total_pieces_board_error.expfail
+/mnt/c/Users/doran/Desktop/SFCS_Test/expFailTestDir/two_pieces_on_square_board_error.expfail
+/mnt/c/Users/doran/Desktop/SFCS_Test/expFailTestDir/w_move_while_b_turn_player_error.expfail
+/mnt/c/Users/doran/Desktop/SFCS_Test/expFailTestDir/w_queen_illegal_knight_move_error.expfail
+
+
+                **** Beginning SFCS API Tests ****
+
+======================================================================
+****** Starting test case b_castling_kingside ******
+
+Test: b_castling_kingside specified in test definition file b_castling_kingside.passtest
+
+Test Description:  Black Castling Kingside move test
+
+***Beginning test run of b_castling_kingside***
+
+This is a functional test expected to return a full API response.
+
+We have an API Request for b_castling_kingside. Submit it to the SFCS API and save to log file.
+
+We have an API Response from the SFCS Server for test b_castling_kingside - Saving to log file.
+
+Received an 'error' message in the SFCS API response:
+
+{'error': {'data': '0-0', 'message': 'Invalid move string.', 'code': -32020}, 'id': 1}
+Checking our SFCS API response against the expected response params...
+Found unexpected results in the API response!
+
+FUNCTIONAL TEST b_castling_kingside FAILED.
+Returned Failure Information:
+functionalTestFAIL: Received unexpected API response error {'error': {'data': '0-0', 'message': 'Invalid move string.', 'code': -32020}, 'id': 1}
+=============================================================================
+
+
+Moving on to next test...
+
+======================================================================
+****** Starting test case b_castling_queenside ******
+
+Test: b_castling_queenside specified in test definition file b_castling_queenside.passtest
+
+Test Description:  Black Castling Queenside move test
+
+***Beginning test run of b_castling_queenside***
+
+This is a functional test expected to return a full API response.
+
+We have an API Request for b_castling_queenside. Submit it to the SFCS API and save to log file.
+
+We have an API Response from the SFCS Server for test b_castling_queenside - Saving to log file.
+
+Received an 'error' message in the SFCS API response:
+
+{'error': {'data': '0-0-0', 'message': 'Invalid move string.', 'code': -32020}, 'id': 1}
+Checking our SFCS API response against the expected response params...
+Found unexpected results in the API response!
+
+FUNCTIONAL TEST b_castling_queenside FAILED.
+Returned Failure Information:
+functionalTestFAIL: Received unexpected API response error {'error': {'data': '0-0-0', 'message': 'Invalid move string.', 'code': -32020}, 'id': 1}
+=============================================================================
+
+
+Moving on to next test...
+
+======================================================================
+****** Starting test case b_kings_bishop_start_SW2 ******
+
+Test: b_kings_bishop_start_SW2 specified in test definition file b_kings_bishop_start_SW2.passtest
+
+Test Description:  Black King's Bishop Starting Move SW
+
+***Beginning test run of b_kings_bishop_start_SW2***
+
+This is a functional test expected to return a full API response.
+
+We have an API Request for b_kings_bishop_start_SW2. Submit it to the SFCS API and save to log file.
+
+We have an API Response from the SFCS Server for test b_kings_bishop_start_SW2 - Saving to log file.
+
+Checking our SFCS API response against the expected response params...
+All API response params as expected.
+
+FUNCTIONAL TEST b_kings_bishop_start_SW2 PASSED.
+=============================================================================
+
+
+======================================================================
+****** Starting test case b_king_start_w1 ******
+
+Test: b_king_start_w1 specified in test definition file b_king_start_w1.passtest
+
+Test Description:  Black King Start Move West
+
+***Beginning test run of b_king_start_w1***
+
+This is a functional test expected to return a full API response.
+
+We have an API Request for b_king_start_w1. Submit it to the SFCS API and save to log file.
+
+We have an API Response from the SFCS Server for test b_king_start_w1 - Saving to log file.
+
+Checking our SFCS API response against the expected response params...
+All API response params as expected.
+
+FUNCTIONAL TEST b_king_start_w1 PASSED.
+=============================================================================
+
+
+======================================================================
+****** Starting test case b_knight_jump_pawn_SW ******
+
+Test: b_knight_jump_pawn_SW specified in test definition file b_knight_jump_pawn_SW.passtest
+
+Test Description:  Black Knight Start Move left, jumping pawn
+
+***Beginning test run of b_knight_jump_pawn_SW***
+
+This is a functional test expected to return a full API response.
+
+We have an API Request for b_knight_jump_pawn_SW. Submit it to the SFCS API and save to log file.
+
+We have an API Response from the SFCS Server for test b_knight_jump_pawn_SW - Saving to log file.
+
+Checking our SFCS API response against the expected response params...
+All API response params as expected.
+
+FUNCTIONAL TEST b_knight_jump_pawn_SW PASSED.
+=============================================================================
+
+
+======================================================================
+****** Starting test case b_knight_jump_right_SE ******
+
+Test: b_knight_jump_right_SE specified in test definition file b_knight_jump_right_SE.passtest
+
+Test Description:  Black Knight starting move, jumping pawn right
+
+***Beginning test run of b_knight_jump_right_SE***
+
+This is a functional test expected to return a full API response.
+
+We have an API Request for b_knight_jump_right_SE. Submit it to the SFCS API and save to log file.
+
+We have an API Response from the SFCS Server for test b_knight_jump_right_SE - Saving to log file.
+
+Checking our SFCS API response against the expected response params...
+All API response params as expected.
+
+FUNCTIONAL TEST b_knight_jump_right_SE PASSED.
+=============================================================================
+
+
+======================================================================
+****** Starting test case b_pawn_start_S1 ******
+
+Test: b_pawn_start_S1 specified in test definition file b_pawn_start_S1.passtest
+
+Test Description:  Black Pawn makes black starting move
+
+***Beginning test run of b_pawn_start_S1***
+
+This is a functional test expected to return a full API response.
+
+We have an API Request for b_pawn_start_S1. Submit it to the SFCS API and save to log file.
+
+We have an API Response from the SFCS Server for test b_pawn_start_S1 - Saving to log file.
+
+Checking our SFCS API response against the expected response params...
+All API response params as expected.
+
+FUNCTIONAL TEST b_pawn_start_S1 PASSED.
+=============================================================================
+
+
+======================================================================
+****** Starting test case b_pawn_start_S2 ******
+
+Test: b_pawn_start_S2 specified in test definition file b_pawn_start_S2.passtest
+
+Test Description:  Black Pawn opening move, 2 squares
+
+***Beginning test run of b_pawn_start_S2***
+
+This is a functional test expected to return a full API response.
+
+We have an API Request for b_pawn_start_S2. Submit it to the SFCS API and save to log file.
+
+We have an API Response from the SFCS Server for test b_pawn_start_S2 - Saving to log file.
+
+Checking our SFCS API response against the expected response params...
+All API response params as expected.
+
+FUNCTIONAL TEST b_pawn_start_S2 PASSED.
+=============================================================================
+
+
+======================================================================
+****** Starting test case b_queens_bishop_start_SE3 ******
+
+Test: b_queens_bishop_start_SE3 specified in test definition file b_queens_bishop_start_SE3.passtest
+
+Test Description:  Black Queen's Bishop Starting Move SE
+
+***Beginning test run of b_queens_bishop_start_SE3***
+
+This is a functional test expected to return a full API response.
+
+We have an API Request for b_queens_bishop_start_SE3. Submit it to the SFCS API and save to log file.
+
+We have an API Response from the SFCS Server for test b_queens_bishop_start_SE3 - Saving to log file.
+
+Checking our SFCS API response against the expected response params...
+All API response params as expected.
+
+FUNCTIONAL TEST b_queens_bishop_start_SE3 PASSED.
+=============================================================================
+
+
+======================================================================
+****** Starting test case b_queen_start_SE2 ******
+
+Test: b_queen_start_SE2 specified in test definition file b_queen_start_SE2.passtest
+
+Test Description:  Black Queen start move, SE
+
+***Beginning test run of b_queen_start_SE2***
+
+This is a functional test expected to return a full API response.
+
+We have an API Request for b_queen_start_SE2. Submit it to the SFCS API and save to log file.
+
+We have an API Response from the SFCS Server for test b_queen_start_SE2 - Saving to log file.
+
+Checking our SFCS API response against the expected response params...
+All API response params as expected.
+
+FUNCTIONAL TEST b_queen_start_SE2 PASSED.
+=============================================================================
+
+
+======================================================================
+****** Starting test case b_rook_start_E3 ******
+
+Test: b_rook_start_E3 specified in test definition file b_rook_start_E3.passtest
+
+Test Description:  Black Rook Start Horizontal move
+
+***Beginning test run of b_rook_start_E3***
+
+This is a functional test expected to return a full API response.
+
+We have an API Request for b_rook_start_E3. Submit it to the SFCS API and save to log file.
+
+We have an API Response from the SFCS Server for test b_rook_start_E3 - Saving to log file.
+
+Checking our SFCS API response against the expected response params...
+All API response params as expected.
+
+FUNCTIONAL TEST b_rook_start_E3 PASSED.
+=============================================================================
+
+
+======================================================================
+****** Starting test case b_rook_start_S5 ******
+
+Test: b_rook_start_S5 specified in test definition file b_rook_start_S5.passtest
+
+Test Description:  Black Rook start Move, S5
+
+***Beginning test run of b_rook_start_S5***
+
+This is a functional test expected to return a full API response.
+
+We have an API Request for b_rook_start_S5. Submit it to the SFCS API and save to log file.
+
+We have an API Response from the SFCS Server for test b_rook_start_S5 - Saving to log file.
+
+Checking our SFCS API response against the expected response params...
+All API response params as expected.
+
+FUNCTIONAL TEST b_rook_start_S5 PASSED.
+=============================================================================
+
+
+======================================================================
+****** Starting test case w_castling_kingside ******
+
+Test: w_castling_kingside specified in test definition file w_castling_kingside.passtest
+
+Test Description:  White KingSide Castling move test
+
+***Beginning test run of w_castling_kingside***
+
+This is a functional test expected to return a full API response.
+
+We have an API Request for w_castling_kingside. Submit it to the SFCS API and save to log file.
+
+We have an API Response from the SFCS Server for test w_castling_kingside - Saving to log file.
+
+Received an 'error' message in the SFCS API response:
+
+{'error': {'data': '0-0', 'message': 'Invalid move string.', 'code': -32020}, 'id': 1}
+Checking our SFCS API response against the expected response params...
+Found unexpected results in the API response!
+
+FUNCTIONAL TEST w_castling_kingside FAILED.
+Returned Failure Information:
+functionalTestFAIL: Received unexpected API response error {'error': {'data': '0-0', 'message': 'Invalid move string.', 'code': -32020}, 'id': 1}
+=============================================================================
+
+
+Moving on to next test...
+
+======================================================================
+****** Starting test case w_castling_queenside ******
+
+Test: w_castling_queenside specified in test definition file w_castling_queenside.passtest
+
+Test Description:  White QueenSide Castling move test
+
+***Beginning test run of w_castling_queenside***
+
+This is a functional test expected to return a full API response.
+
+We have an API Request for w_castling_queenside. Submit it to the SFCS API and save to log file.
+
+We have an API Response from the SFCS Server for test w_castling_queenside - Saving to log file.
+
+Received an 'error' message in the SFCS API response:
+
+{'error': {'data': '0-0-0', 'message': 'Invalid move string.', 'code': -32020}, 'id': 1}
+Checking our SFCS API response against the expected response params...
+Found unexpected results in the API response!
+
+FUNCTIONAL TEST w_castling_queenside FAILED.
+Returned Failure Information:
+functionalTestFAIL: Received unexpected API response error {'error': {'data': '0-0-0', 'message': 'Invalid move string.', 'code': -32020}, 'id': 1}
+=============================================================================
+
+
+Moving on to next test...
+
+======================================================================
+****** Starting test case w_kings_bishop_start_NE3 ******
+
+Test: w_kings_bishop_start_NE3 specified in test definition file w_kings_bishop_start_NE3.passtest
+
+Test Description:  White King's Bishop starting move NE
+
+***Beginning test run of w_kings_bishop_start_NE3***
+
+This is a functional test expected to return a full API response.
+
+We have an API Request for w_kings_bishop_start_NE3. Submit it to the SFCS API and save to log file.
+
+We have an API Response from the SFCS Server for test w_kings_bishop_start_NE3 - Saving to log file.
+
+Checking our SFCS API response against the expected response params...
+All API response params as expected.
+
+FUNCTIONAL TEST w_kings_bishop_start_NE3 PASSED.
+=============================================================================
+
+
+======================================================================
+****** Starting test case w_kings_bishop_start_NW2 ******
+
+Test: w_kings_bishop_start_NW2 specified in test definition file w_kings_bishop_start_NW2.passtest
+
+Test Description:  White King's Bishop starting move NW
+
+***Beginning test run of w_kings_bishop_start_NW2***
+
+This is a functional test expected to return a full API response.
+
+We have an API Request for w_kings_bishop_start_NW2. Submit it to the SFCS API and save to log file.
+
+We have an API Response from the SFCS Server for test w_kings_bishop_start_NW2 - Saving to log file.
+
+Checking our SFCS API response against the expected response params...
+All API response params as expected.
+
+FUNCTIONAL TEST w_kings_bishop_start_NW2 PASSED.
+=============================================================================
+
+
+======================================================================
+****** Starting test case w_king_b_king_stalemate ******
+
+Test: w_king_b_king_stalemate specified in test definition file w_king_b_king_stalemate.passtest
+
+Test Description:  Only two pieces on board, B & w Kings. Expected Stalemate.
+
+***Beginning test run of w_king_b_king_stalemate***
+
+This is a functional test expected to return a full API response.
+
+We have an API Request for w_king_b_king_stalemate. Submit it to the SFCS API and save to log file.
+
+We have an API Response from the SFCS Server for test w_king_b_king_stalemate - Saving to log file.
+
+Checking our SFCS API response against the expected response params...
+Found unexpected results in the API response!
+
+FUNCTIONAL TEST w_king_b_king_stalemate FAILED.
+Returned Failure Information:
+functionalTestFAIL: API response of gameState:  does not equal the expected gameState: stalemate
+
+=============================================================================
+
+
+Moving on to next test...
+
+======================================================================
+****** Starting test case w_king_start_W1 ******
+
+Test: w_king_start_W1 specified in test definition file w_king_start_W1.passtest
+
+Test Description:  White King Start Move West
+
+***Beginning test run of w_king_start_W1***
+
+This is a functional test expected to return a full API response.
+
+We have an API Request for w_king_start_W1. Submit it to the SFCS API and save to log file.
+
+We have an API Response from the SFCS Server for test w_king_start_W1 - Saving to log file.
+
+Checking our SFCS API response against the expected response params...
+All API response params as expected.
+
+FUNCTIONAL TEST w_king_start_W1 PASSED.
+=============================================================================
+
+
+======================================================================
+****** Starting test case w_knight_start_jump_pawn_NW ******
+
+Test: w_knight_start_jump_pawn_NW specified in test definition file w_knight_start_jump_pawn_NW.passtest
+
+Test Description:  White Knight Starting Move Right, jumping pawn
+
+***Beginning test run of w_knight_start_jump_pawn_NW***
+
+This is a functional test expected to return a full API response.
+
+We have an API Request for w_knight_start_jump_pawn_NW. Submit it to the SFCS API and save to log file.
+
+We have an API Response from the SFCS Server for test w_knight_start_jump_pawn_NW - Saving to log file.
+
+Checking our SFCS API response against the expected response params...
+All API response params as expected.
+
+FUNCTIONAL TEST w_knight_start_jump_pawn_NW PASSED.
+=============================================================================
+
+
+======================================================================
+****** Starting test case w_knight_start_jump_SE ******
+
+Test: w_knight_start_jump_SE specified in test definition file w_knight_start_jump_SE.passtest
+
+Test Description:  White Knight starting move left over pawn
+
+***Beginning test run of w_knight_start_jump_SE***
+
+This is a functional test expected to return a full API response.
+
+We have an API Request for w_knight_start_jump_SE. Submit it to the SFCS API and save to log file.
+
+We have an API Response from the SFCS Server for test w_knight_start_jump_SE - Saving to log file.
+
+Checking our SFCS API response against the expected response params...
+All API response params as expected.
+
+FUNCTIONAL TEST w_knight_start_jump_SE PASSED.
+=============================================================================
+
+
+======================================================================
+****** Starting test case w_pawn_captures_bishop_NW1 ******
+
+Test: w_pawn_captures_bishop_NW1 specified in test definition file w_pawn_captures_bishop_NW1.passtest
+
+Test Description:  White Pawn captures bishop
+
+***Beginning test run of w_pawn_captures_bishop_NW1***
+
+This is a functional test expected to return a full API response.
+
+We have an API Request for w_pawn_captures_bishop_NW1. Submit it to the SFCS API and save to log file.
+
+We have an API Response from the SFCS Server for test w_pawn_captures_bishop_NW1 - Saving to log file.
+
+Checking our SFCS API response against the expected response params...
+All API response params as expected.
+
+FUNCTIONAL TEST w_pawn_captures_bishop_NW1 PASSED.
+=============================================================================
+
+
+======================================================================
+****** Starting test case w_pawn_enpassant_capture_NW1 ******
+
+Test: w_pawn_enpassant_capture_NW1 specified in test definition file w_pawn_enpassant_capture_NW1.passtest
+
+Test Description:  White Pawn En Passant Capture, no check
+
+***Beginning test run of w_pawn_enpassant_capture_NW1***
+
+This is a functional test expected to return a full API response.
+
+We have an API Request for w_pawn_enpassant_capture_NW1. Submit it to the SFCS API and save to log file.
+
+We have an API Response from the SFCS Server for test w_pawn_enpassant_capture_NW1 - Saving to log file.
+
+Received an 'error' message in the SFCS API response:
+
+{'error': {'data': 'exd6(ep)', 'message': 'Invalid move string.', 'code': -32020}, 'id': 1}
+Checking our SFCS API response against the expected response params...
+Found unexpected results in the API response!
+
+FUNCTIONAL TEST w_pawn_enpassant_capture_NW1 FAILED.
+Returned Failure Information:
+functionalTestFAIL: Received unexpected API response error {'error': {'data': 'exd6(ep)', 'message': 'Invalid move string.', 'code': -32020}, 'id': 1}
+=============================================================================
+
+
+Moving on to next test...
+
+======================================================================
+****** Starting test case w_pawn_promotion_to_queen_check_N1 ******
+
+Test: w_pawn_promotion_to_queen_check_N1 specified in test definition file w_pawn_promotion_to_queen_check_N1.passtest
+
+Test Description:  White Pawn Promotion to White Queen, no capture
+
+***Beginning test run of w_pawn_promotion_to_queen_check_N1***
+
+This is a functional test expected to return a full API response.
+
+We have an API Request for w_pawn_promotion_to_queen_check_N1. Submit it to the SFCS API and save to log file.
+
+We have an API Response from the SFCS Server for test w_pawn_promotion_to_queen_check_N1 - Saving to log file.
+
+Checking our SFCS API response against the expected response params...
+All API response params as expected.
+
+FUNCTIONAL TEST w_pawn_promotion_to_queen_check_N1 PASSED.
+=============================================================================
+
+
+======================================================================
+****** Starting test case w_pawn_start_N1 ******
+
+Test: w_pawn_start_N1 specified in test definition file w_pawn_start_N1.passtest
+
+Test Description:  White Pawn starting move on start board, 1 square
+
+***Beginning test run of w_pawn_start_N1***
+
+This is a functional test expected to return a full API response.
+
+We have an API Request for w_pawn_start_N1. Submit it to the SFCS API and save to log file.
+
+We have an API Response from the SFCS Server for test w_pawn_start_N1 - Saving to log file.
+
+Checking our SFCS API response against the expected response params...
+All API response params as expected.
+
+FUNCTIONAL TEST w_pawn_start_N1 PASSED.
+=============================================================================
+
+
+======================================================================
+****** Starting test case w_pawn_start_N2 ******
+
+Test: w_pawn_start_N2 specified in test definition file w_pawn_start_N2.passtest
+
+Test Description:  White Pawn starting move on starting board - 2 squares
+
+***Beginning test run of w_pawn_start_N2***
+
+This is a functional test expected to return a full API response.
+
+We have an API Request for w_pawn_start_N2. Submit it to the SFCS API and save to log file.
+
+We have an API Response from the SFCS Server for test w_pawn_start_N2 - Saving to log file.
+
+Checking our SFCS API response against the expected response params...
+All API response params as expected.
+
+FUNCTIONAL TEST w_pawn_start_N2 PASSED.
+=============================================================================
+
+
+======================================================================
+****** Starting test case w_queens_bishop_start_NE2 ******
+
+Test: w_queens_bishop_start_NE2 specified in test definition file w_queens_bishop_start_NE2.passtest
+
+Test Description:  White Queen's Bishop starting move NW
+
+***Beginning test run of w_queens_bishop_start_NE2***
+
+This is a functional test expected to return a full API response.
+
+We have an API Request for w_queens_bishop_start_NE2. Submit it to the SFCS API and save to log file.
+
+We have an API Response from the SFCS Server for test w_queens_bishop_start_NE2 - Saving to log file.
+
+Checking our SFCS API response against the expected response params...
+All API response params as expected.
+
+FUNCTIONAL TEST w_queens_bishop_start_NE2 PASSED.
+=============================================================================
+
+
+======================================================================
+****** Starting test case w_queens_bishop_start_NW ******
+
+Test: w_queens_bishop_start_NW specified in test definition file w_queens_bishop_start_NW.passtest
+
+Test Description:  White Queen's Bishop Starting Move NW
+
+***Beginning test run of w_queens_bishop_start_NW***
+
+This is a functional test expected to return a full API response.
+
+We have an API Request for w_queens_bishop_start_NW. Submit it to the SFCS API and save to log file.
+
+We have an API Response from the SFCS Server for test w_queens_bishop_start_NW - Saving to log file.
+
+Checking our SFCS API response against the expected response params...
+All API response params as expected.
+
+FUNCTIONAL TEST w_queens_bishop_start_NW PASSED.
+=============================================================================
+
+
+======================================================================
+****** Starting test case w_queen_start_NE3 ******
+
+Test: w_queen_start_NE3 specified in test definition file w_queen_start_NE3.passtest
+
+Test Description:  White Queen Start Move
+
+***Beginning test run of w_queen_start_NE3***
+
+This is a functional test expected to return a full API response.
+
+We have an API Request for w_queen_start_NE3. Submit it to the SFCS API and save to log file.
+
+We have an API Response from the SFCS Server for test w_queen_start_NE3 - Saving to log file.
+
+Checking our SFCS API response against the expected response params...
+All API response params as expected.
+
+FUNCTIONAL TEST w_queen_start_NE3 PASSED.
+=============================================================================
+
+
+======================================================================
+****** Starting test case w_rook_checkmate_N5 ******
+
+Test: w_rook_checkmate_N5 specified in test definition file w_rook_checkmate_N5.passtest
+
+Test Description:  White Rook moves for checkmate
+
+***Beginning test run of w_rook_checkmate_N5***
+
+This is a functional test expected to return a full API response.
+
+We have an API Request for w_rook_checkmate_N5. Submit it to the SFCS API and save to log file.
+
+We have an API Response from the SFCS Server for test w_rook_checkmate_N5 - Saving to log file.
+
+Checking our SFCS API response against the expected response params...
+All API response params as expected.
+
+FUNCTIONAL TEST w_rook_checkmate_N5 PASSED.
+=============================================================================
+
+
+======================================================================
+****** Starting test case w_rook_check_N5 ******
+
+Test: w_rook_check_N5 specified in test definition file w_rook_check_N5.passtest
+
+Test Description:  White Rook moves for Check
+
+***Beginning test run of w_rook_check_N5***
+
+This is a functional test expected to return a full API response.
+
+We have an API Request for w_rook_check_N5. Submit it to the SFCS API and save to log file.
+
+We have an API Response from the SFCS Server for test w_rook_check_N5 - Saving to log file.
+
+Checking our SFCS API response against the expected response params...
+All API response params as expected.
+
+FUNCTIONAL TEST w_rook_check_N5 PASSED.
+=============================================================================
+
+
+======================================================================
+****** Starting test case w_rook_start_move ******
+
+Test: w_rook_start_move specified in test definition file w_rook_start_move.passtest
+
+Test Description:  White Rook Moving from start position
+
+***Beginning test run of w_rook_start_move***
+
+This is a functional test expected to return a full API response.
+
+We have an API Request for w_rook_start_move. Submit it to the SFCS API and save to log file.
+
+We have an API Response from the SFCS Server for test w_rook_start_move - Saving to log file.
+
+Checking our SFCS API response against the expected response params...
+All API response params as expected.
+
+FUNCTIONAL TEST w_rook_start_move PASSED.
+=============================================================================
+
+
+======================================================================
+****** Starting test case b_pawn_starts_first_move_error ******
+
+Test: b_pawn_starts_first_move_error specified in test definition file b_pawn_starts_first_move_error.expfail
+
+Test Description:  Black Pawn moves first on a starting board - expected Move Error
+
+***Beginning test run of b_pawn_starts_first_move_error***
+
+This is an expected Error Case.
+The Expected API Response Error Code value is: -32020
+We have an API Request for b_pawn_starts_first_move_error. Submit it to the SFCS API and save to log file.
+
+We have an API Response from the SFCS Server for test b_pawn_starts_first_move_error - Saving to log file.
+
+Checking our SFCS API response against the expected response params...
+Found unexpected results in the API response!
+EXPECTED Error TEST b_pawn_starts_first_move_error FAILED.
+
+Returned Failure Information:
+expectedErrorCaseFAIL
+Expecting: -32020
+Received: {'result': {'gameState': '', 'boardState': [{'type': 'R', 'loc': 'a1'}, {'type': 'N', 'loc': 'b1'}, {'type': 'B', 'loc': 'c1'}, {'type': 'Q', 'loc': 'd1'}, {'type': 'K', 'loc': 'e1'}, {'type': 'B', 'loc': 'f1'}, {'type': 'N', 'loc': 'g1'}, {'type': 'R', 'loc': 'h1'}, {'type': 'P', 'loc': 'a2'}, {'type': 'P', 'loc': 'b2'}, {'type': 'P', 'loc': 'c2'}, {'type': 'P', 'loc': 'd2'}, {'type': 'P', 'loc': 'e2'}, {'type': 'P', 'loc': 'f2'}, {'type': 'P', 'loc': 'g2'}, {'type': 'P', 'loc': 'h2'}, {'type': 'p', 'loc': 'd6'}, {'type': 'p', 'loc': 'a7'}, {'type': 'p', 'loc': 'b7'}, {'type': 'p', 'loc': 'c7'}, {'type': 'p', 'loc': 'e7'}, {'type': 'p', 'loc': 'f7'}, {'type': 'p', 'loc': 'g7'}, {'type': 'p', 'loc': 'h7'}, {'type': 'r', 'loc': 'a8'}, {'type': 'n', 'loc': 'b8'}, {'type': 'b', 'loc': 'c8'}, {'type': 'q', 'loc': 'd8'}, {'type': 'k', 'loc': 'e8'}, {'type': 'b', 'loc': 'f8'}, {'type': 'n', 'loc': 'g8'}, {'type': 'r', 'loc': 'h8'}], 'playerState': 'w'}, 'id': 1}
+=============================================================================
+
+
+Moving on to next test...
+
+======================================================================
+****** Starting test case b_queen_illegal_move_thru_pieces_S5 ******
+
+Test: b_queen_illegal_move_thru_pieces_S5 specified in test definition file b_queen_illegal_move_thru_pieces_S5.expfail
+
+Test Description:  Black Queen illegal move through pawns.  Expect move error.
+
+***Beginning test run of b_queen_illegal_move_thru_pieces_S5***
+
+This is an expected Error Case.
+The Expected API Response Error Code value is: -32020
+We have an API Request for b_queen_illegal_move_thru_pieces_S5. Submit it to the SFCS API and save to log file.
+
+We have an API Response from the SFCS Server for test b_queen_illegal_move_thru_pieces_S5 - Saving to log file.
+
+Received an 'error' message in the SFCS API response:
+
+{'error': {'data': 'Qdd3', 'message': 'Move cannot be made.', 'code': -32020}, 'id': 1}
+Checking our SFCS API response against the expected response params...
+Expected Error code returned.
+
+EXPECTED Error TEST b_queen_illegal_move_thru_pieces_S5 PASSED.
+
+=============================================================================
+
+
+======================================================================
+****** Starting test case b_rook_invalid_move_in_white_turn ******
+
+Test: b_rook_invalid_move_in_white_turn specified in test definition file b_rook_invalid_move_in_white_turn.expfail
+
+Test Description:  Moving Black Rook when it's White's turn
+
+***Beginning test run of b_rook_invalid_move_in_white_turn***
+
+This is an expected Error Case.
+The Expected API Response Error Code value is: -32020
+We have an API Request for b_rook_invalid_move_in_white_turn. Submit it to the SFCS API and save to log file.
+
+We have an API Response from the SFCS Server for test b_rook_invalid_move_in_white_turn - Saving to log file.
+
+Received an 'error' message in the SFCS API response:
+
+{'error': {'data': 'Rfxf3', 'message': 'Move cannot be made.', 'code': -32020}, 'id': 1}
+Checking our SFCS API response against the expected response params...
+Expected Error code returned.
+
+EXPECTED Error TEST b_rook_invalid_move_in_white_turn PASSED.
+
+=============================================================================
+
+
+======================================================================
+****** Starting test case nine_b_pawns_board_error ******
+
+Test: nine_b_pawns_board_error specified in test definition file nine_b_pawns_board_error.expfail
+
+Test Description:  Too many balck pawns (9) on starting board.  Expect board error.
+
+***Beginning test run of nine_b_pawns_board_error***
+
+This is an expected Error Case.
+The Expected API Response Error Code value is: -32000
+We have an API Request for nine_b_pawns_board_error. Submit it to the SFCS API and save to log file.
+
+We have an API Response from the SFCS Server for test nine_b_pawns_board_error - Saving to log file.
+
+Received an 'error' message in the SFCS API response:
+
+{'error': {'message': 'Invalid board.', 'code': -32000}, 'id': 1}
+Checking our SFCS API response against the expected response params...
+Expected Error code returned.
+
+EXPECTED Error TEST nine_b_pawns_board_error PASSED.
+
+=============================================================================
+
+
+======================================================================
+****** Starting test case ninth_b_pawn_in_w_start_row_board_error ******
+
+Test: ninth_b_pawn_in_w_start_row_board_error specified in test definition file ninth_b_pawn_in_w_start_row_board_error.expfail
+
+Test Description:  Starting Board, extra black pawn lines up w/ white pawns.  Expect board error.
+
+***Beginning test run of ninth_b_pawn_in_w_start_row_board_error***
+
+This is an expected Error Case.
+The Expected API Response Error Code value is: -32000
+We have an API Request for ninth_b_pawn_in_w_start_row_board_error. Submit it to the SFCS API and save to log file.
+
+We have an API Response from the SFCS Server for test ninth_b_pawn_in_w_start_row_board_error - Saving to log file.
+
+Received an 'error' message in the SFCS API response:
+
+{'error': {'message': 'Invalid board.', 'code': -32000}, 'id': 1}
+Checking our SFCS API response against the expected response params...
+Expected Error code returned.
+
+EXPECTED Error TEST ninth_b_pawn_in_w_start_row_board_error PASSED.
+
+=============================================================================
+
+
+======================================================================
+****** Starting test case one_piece_on_board_error ******
+
+Test: one_piece_on_board_error specified in test definition file one_piece_on_board_error.expfail
+
+Test Description:  Board with only one piece (white King). Expect board error
+
+***Beginning test run of one_piece_on_board_error***
+
+This is an expected Error Case.
+The Expected API Response Error Code value is: -32000
+We have an API Request for one_piece_on_board_error. Submit it to the SFCS API and save to log file.
+
+We have an API Response from the SFCS Server for test one_piece_on_board_error - Saving to log file.
+
+Received an 'error' message in the SFCS API response:
+
+{'error': {'message': 'Invalid board.', 'code': -32000}, 'id': 1}
+Checking our SFCS API response against the expected response params...
+Expected Error code returned.
+
+EXPECTED Error TEST one_piece_on_board_error PASSED.
+
+=============================================================================
+
+
+======================================================================
+****** Starting test case start_board_missing_king_board_error ******
+
+Test: start_board_missing_king_board_error specified in test definition file start_board_missing_king_board_error.expfail
+
+Test Description:  Starting board missing white King.  Expect board error.
+
+***Beginning test run of start_board_missing_king_board_error***
+
+This is an expected Error Case.
+The Expected API Response Error Code value is: -32000
+We have an API Request for start_board_missing_king_board_error. Submit it to the SFCS API and save to log file.
+
+We have an API Response from the SFCS Server for test start_board_missing_king_board_error - Saving to log file.
+
+Received an 'error' message in the SFCS API response:
+
+{'error': {'message': 'Invalid board.', 'code': -32000}, 'id': 1}
+Checking our SFCS API response against the expected response params...
+Expected Error code returned.
+
+EXPECTED Error TEST start_board_missing_king_board_error PASSED.
+
+=============================================================================
+
+
+======================================================================
+****** Starting test case two_b_kings_33_total_pieces_board_error ******
+
+Test: two_b_kings_33_total_pieces_board_error specified in test definition file two_b_kings_33_total_pieces_board_error.expfail
+
+Test Description:  Starting Board w/ 2 Black Kings, more than 32 total pieces
+
+***Beginning test run of two_b_kings_33_total_pieces_board_error***
+
+This is an expected Error Case.
+The Expected API Response Error Code value is: -32000
+We have an API Request for two_b_kings_33_total_pieces_board_error. Submit it to the SFCS API and save to log file.
+
+We have an API Response from the SFCS Server for test two_b_kings_33_total_pieces_board_error - Saving to log file.
+
+Received an 'error' message in the SFCS API response:
+
+{'error': {'message': 'Invalid board.', 'code': -32000}, 'id': 1}
+Checking our SFCS API response against the expected response params...
+Expected Error code returned.
+
+EXPECTED Error TEST two_b_kings_33_total_pieces_board_error PASSED.
+
+=============================================================================
+
+
+======================================================================
+****** Starting test case two_pieces_on_square_board_error ******
+
+Test: two_pieces_on_square_board_error specified in test definition file two_pieces_on_square_board_error.expfail
+
+Test Description:  Two pieces on one square.  Expect board error.
+
+***Beginning test run of two_pieces_on_square_board_error***
+
+This is an expected Error Case.
+The Expected API Response Error Code value is: -32000
+We have an API Request for two_pieces_on_square_board_error. Submit it to the SFCS API and save to log file.
+
+We have an API Response from the SFCS Server for test two_pieces_on_square_board_error - Saving to log file.
+
+Received an 'error' message in the SFCS API response:
+
+{'error': {'message': 'Invalid board.', 'code': -32000}, 'id': 1}
+Checking our SFCS API response against the expected response params...
+Expected Error code returned.
+
+EXPECTED Error TEST two_pieces_on_square_board_error PASSED.
+
+=============================================================================
+
+
+======================================================================
+****** Starting test case w_move_while_b_turn_player_error ******
+
+Test: w_move_while_b_turn_player_error specified in test definition file w_move_while_b_turn_player_error.expfail
+
+Test Description:  White Move while Black Turn.  Expect Player Error.
+
+***Beginning test run of w_move_while_b_turn_player_error***
+
+This is an expected Error Case.
+The Expected API Response Error Code value is: -32010
+We have an API Request for w_move_while_b_turn_player_error. Submit it to the SFCS API and save to log file.
+
+We have an API Response from the SFCS Server for test w_move_while_b_turn_player_error - Saving to log file.
+
+Received an 'error' message in the SFCS API response:
+
+{'error': {'data': 'Ked2', 'message': 'Move cannot be made.', 'code': -32020}, 'id': 1}
+Checking our SFCS API response against the expected response params...
+Found unexpected results in the API response!
+EXPECTED Error TEST w_move_while_b_turn_player_error FAILED.
+
+Returned Failure Information:
+expectedErrorCaseFAIL
+Expecting: -32010
+Received: -32020
+=============================================================================
+
+
+Moving on to next test...
+
+======================================================================
+****** Starting test case w_queen_illegal_knight_move_error ******
+
+Test: w_queen_illegal_knight_move_error specified in test definition file w_queen_illegal_knight_move_error.expfail
+
+Test Description:  White Queen makes illegal Knight move.  Expect Move error
+
+***Beginning test run of w_queen_illegal_knight_move_error***
+
+This is an expected Error Case.
+The Expected API Response Error Code value is: -32020
+We have an API Request for w_queen_illegal_knight_move_error. Submit it to the SFCS API and save to log file.
+
+We have an API Response from the SFCS Server for test w_queen_illegal_knight_move_error - Saving to log file.
+
+Received an 'error' message in the SFCS API response:
+
+{'error': {'data': 'Qde3', 'message': 'Move cannot be made.', 'code': -32020}, 'id': 1}
+Checking our SFCS API response against the expected response params...
+Expected Error code returned.
+
+EXPECTED Error TEST w_queen_illegal_knight_move_error PASSED.
+
+=============================================================================
+
+
+Thank You for using our amazing API testing facility!!!
+
+Exiting Run_SFCS_Tests!

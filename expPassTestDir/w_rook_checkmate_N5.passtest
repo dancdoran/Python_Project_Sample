@@ -1,0 +1,7 @@
+w_rook_checkmate_N5
+Description : White Rook moves for checkmate
+request : {"method" : "MakeMove","params": {"boardState": [{"loc": "c7", "type": "R"}, {"loc": "e1", "type": "K"}, {"loc": "g3", "type": "R"}, {"loc": "c5", "type": "r"}, {"loc": "e8", "type": "k"}, {"loc": "h6", "type": "r"}], "move": "Rgg8#", "playerState": "w"},"id" : 1,"jsonrpc" : "2.0"}
+"gameState": "checkmate"
+"playerState": "b"
+movedPieces : [{'loc': 'g3', 'type': 'R'}]
+expectedResponsePieces : [{'loc': 'g8', 'type': 'R'}]

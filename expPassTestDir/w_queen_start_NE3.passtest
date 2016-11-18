@@ -1,0 +1,7 @@
+w_queen_start_NE3
+Description : White Queen Start Move
+request : {"method" : "MakeMove","params": {"boardState": [{"loc": "d1", "type": "Q"}, {"loc": "g2", "type": "K"}, {"loc": "d8", "type": "q"}, {"loc": "b7", "type": "k"}], "move": "Qda4", "playerState": "w"},"id" : 1,"jsonrpc" : "2.0"}
+"gameState": ""
+"playerState": "b"
+movedPieces : [{'loc': 'd1', 'type': 'Q'}]
+expectedResponsePieces : [{'loc': 'a4', 'type': 'Q'}]

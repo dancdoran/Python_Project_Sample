@@ -1,0 +1,7 @@
+testName : w_castling_queenside
+Description : White QueenSide Castling move test
+request : {"method" : "MakeMove","params": {"boardState": [{"loc": "a1", "type": "R"}, {"loc": "e1", "type": "K"}, {"loc": "h1", "type": "R"}, {"loc": "a2", "type": "P"}, {"loc": "b2", "type": "P"}, {"loc": "c2", "type": "P"}, {"loc": "f2", "type": "P"}, {"loc": "g2", "type": "P"}, {"loc": "h2", "type": "P"}, {"loc": "a7", "type": "p"}, {"loc": "b7", "type": "p"}, {"loc": "c7", "type": "p"}, {"loc": "f7", "type": "p"}, {"loc": "g7", "type": "p"}, {"loc": "h7", "type": "p"}, {"loc": "a8", "type": "r"}, {"loc": "e8", "type": "k"}, {"loc": "h8", "type": "r"}], "move": "0-0-0", "playerState": "w"},"id" : 1,"jsonrpc" : "2.0"}
+"gameState": ""
+"playerState": "b"
+movedPieces : [{'loc': 'a1', 'type': 'R'}, {'loc': 'e1', 'type': 'K'}]
+expectedResponsePieces : [{'loc': 'd1', 'type': 'R'}, {'loc': 'c1', 'type': 'K'}]

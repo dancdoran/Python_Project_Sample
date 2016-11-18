@@ -1,0 +1,7 @@
+w_pawn_enpassant_capture_NW1
+Description : White Pawn En Passant Capture, no check
+request : {"method" : "MakeMove","params": {"boardState": [{"loc": "a1", "type": "R"}, {"loc": "b1", "type": "N"}, {"loc": "c1", "type": "B"}, {"loc": "d1", "type": "Q"}, {"loc": "e1", "type": "K"}, {"loc": "f1", "type": "B"}, {"loc": "g1", "type": "N"}, {"loc": "h1", "type": "R"}, {"loc": "a2", "type": "P"}, {"loc": "b2", "type": "P"}, {"loc": "c2", "type": "P"}, {"loc": "d2", "type": "P"}, {"loc": "e5", "type": "P"}, {"loc": "f2", "type": "P"}, {"loc": "g2", "type": "P"}, {"loc": "h2", "type": "P"}, {"loc": "a7", "type": "p"}, {"loc": "b6", "type": "p"}, {"loc": "c7", "type": "p"}, {"loc": "d5", "type": "p"}, {"loc": "e7", "type": "p"}, {"loc": "f7", "type": "p"}, {"loc": "g7", "type": "p"}, {"loc": "h7", "type": "p"}, {"loc": "a8", "type": "r"}, {"loc": "b8", "type": "n"}, {"loc": "c8", "type": "b"}, {"loc": "d8", "type": "q"}, {"loc": "e8", "type": "k"}, {"loc": "f8", "type": "b"}, {"loc": "g8", "type": "n"}, {"loc": "h8", "type": "r"}], "move": "exd6(ep)", "playerState": "w"},"id" : 1,"jsonrpc" : "2.0"}
+"gameState": ""
+"playerState": "b"
+movedPieces : [{'loc': 'e5', 'type': 'P'}]
+expectedResponsePieces : [{'loc': 'd5', 'type': 'p'}]
