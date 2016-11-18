@@ -7,6 +7,10 @@ The purpose of this project is to thoroughly test a sample web JSON-RPC API meth
 
 All documents and files in this repository were written solely by me, and I reserve any authorship claims and copyrights.  They are however open for inspection and evaluation as well as critical feedback if appropriate.
 
+DOCUMENTATION:  See the included SolidFire_Chess_Service_Test_Strategy.docx word document, as well as the project README below.
+
+DOWNLOAD & RUN: dan_doran_SFCS_sssignment.tar.gz   - See 'QUICK START' section at bottom of this page.
+
 Below is a copy of the contained README File:
 ========================================================================
 SolidFire Chess Service Testing and Test Case Creation Program
